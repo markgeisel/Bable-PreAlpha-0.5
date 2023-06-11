@@ -2,7 +2,7 @@ event_inherited();
 
 
 
-if state !=EnemySTATE.ATTACK{
+if state !=EnemySTATE.ATTACK&&state !=EnemySTATE.DIE{
 
 var display_dir = round(((dir) mod 360) / 90);
 

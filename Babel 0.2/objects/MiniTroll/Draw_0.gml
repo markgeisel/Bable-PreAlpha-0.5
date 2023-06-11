@@ -3,7 +3,7 @@
 
 if (variable_Shadow) draw_sprite(Shadow,0,x,y);
 
-draw_text(x,y,Skin)
+
 
 
 

@@ -284,6 +284,6 @@ CurrentHallway = new Hallwayarea(_hallwayX1, _hallwayY1, _hallwayX2, _hallwayY2)
 	
 	ds_list_add(Hallwaylist, CurrentHallway);
  
-	ds_grid_set_region(dungeon,_hallwayX1, _hallwayY1, _hallwayX2, _hallwayY2, CELL_TYPES.HALLWAY); 
+	ds_grid_set_region(dungeon,_hallwayX1, _hallwayY1, _hallwayX2, _hallwayY2, CELL_TYPES.HALLWAY);
 }
-
+ 

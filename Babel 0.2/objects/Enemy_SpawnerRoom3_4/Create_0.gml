@@ -11,5 +11,9 @@ E7=MiniTroll
 E8=Iceking
 E9=LivingIce
 E10=Edragur
-
+E11=Firethrower
+E12=FireFloater
+E13=O_oni
+E14=Raiju
+E15=Golem
 RangeTime= 0 

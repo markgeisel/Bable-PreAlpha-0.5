@@ -6,14 +6,17 @@ event_inherited();
 aggro = 0; 
 state = EnemySTATE.WANDER;
 _Lighting=0;
-sprMoveR = dreiliftseveredwalk;
-sprMoveL= Dreililiftseveredleft;
-sprMoveD =  dreiliftsevereddown;
-sprMoveU =  dreiliftsperatedwalkup;
-sprMoveRA =dreiliftseveredwalk ;
-sprMoveLA= Dreililiftseveredleft;
-sprMoveDA =  dreiliftsevereddown;
-sprMoveUA =  dreiliftsperatedwalkup;
+sprMoveR = SplitWalkRight;
+sprMoveL= SplitWalkLeft;
+sprMoveD =  SplitWalkDown;
+sprMoveU =  SplitWalkUp;
+sprMoveRA =SplitAttackRight ;
+sprMoveLA= SplitAttackLeft;
+sprMoveDA =  SplitAttackDown;
+sprMoveUA =  SplitAttackUp;
+
+
+
 
 
 small=0

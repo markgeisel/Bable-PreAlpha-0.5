@@ -20,3 +20,4 @@ function Hallwayarea(_hallwayX1, _hallwayY1, _hallwayX2, _hallwayY2) constructor
 	x2 = _hallwayX2;
 	y2 = _hallwayY2;
 }
+ 

@@ -8,5 +8,7 @@ E4=Troll
 E5=IceSlime
 E6=SnowThrowerSwarm
 E7=MiniTroll
-
+E11=Firethrower
+E12=FireFloater
+E15=Golem
 RangeTime= 0 

@@ -508,6 +508,10 @@ ds_list_add(global.IceDungeonFodder, 13);
 
 
 
+
+
+
+
 global.IceDungeonMiniBoss=ds_list_create()
 
 ds_list_add(global.IceDungeonMiniBoss,1)
@@ -517,12 +521,83 @@ ds_list_add(global.IceDungeonMiniBoss,3)
 
 
 
-
-
-
-
 global.IceDungeonMiniBossvalue=irandom(ds_list_size(global.IceDungeonMiniBoss) - 1);
  global.IceDungeonMiniBossValueUse = ds_list_find_value(global.IceDungeonMiniBoss, global.IceDungeonMiniBossvalue);
+
+
+global.FireDungeonFodder=ds_list_create()
+
+
+
+ds_list_add(global.FireDungeonFodder, 1);
+
+
+ global.FireDungeonValue = irandom(ds_list_size(global.FireDungeonFodder) - 1);
+ global.FireDungeonValueUse = ds_list_find_value(global.FireDungeonFodder, global.FireDungeonValue);
+ 
+
+
+global.FireDungeonMiniBoss=ds_list_create()
+
+ds_list_add(global.FireDungeonMiniBoss,1)
+
+
+global.FireDungeonMiniBossvalue=irandom(ds_list_size(global.FireDungeonMiniBoss) - 1);
+ global.FireDungeonMiniBossValueUse = ds_list_find_value(global.FireDungeonMiniBoss, global.FireDungeonMiniBossvalue);
+
+
+global.LightningDungeonMiniBoss=ds_list_create()
+
+ds_list_add(global.LightningDungeonMiniBoss,1)
+
+
+global.LightningDungeonMiniBossvalue=irandom(ds_list_size(global.LightningDungeonMiniBoss) - 1);
+ global.LightningDungeonMiniBossValueUse = ds_list_find_value(global.LightningDungeonMiniBoss, global.LightningDungeonMiniBossvalue);
+
+
+global.LightningDungeonFodder=ds_list_create()
+
+
+
+ds_list_add(global.LightningDungeonFodder, 1);
+
+
+ global.LightningDungeonValue = irandom(ds_list_size(global.LightningDungeonFodder) - 1);
+ global.LightningDungeonValueUse = ds_list_find_value(global.LightningDungeonFodder, global.LightningDungeonValue);
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+global.EarthDungeonMiniBoss=ds_list_create()
+
+ds_list_add(global.EarthDungeonMiniBoss,1)
+
+
+global.EarthDungeonMiniBossvalue=irandom(ds_list_size(global.EarthDungeonMiniBoss) - 1);
+ global.EarthDungeonMiniBossValueUse = ds_list_find_value(global.EarthDungeonMiniBoss, global.LightningDungeonMiniBossvalue);
+
+
+global.EarthDungeonFodder=ds_list_create()
+
+
+
+ds_list_add(global.EarthDungeonFodder, 1);
+
+
+ global.EarthDungeonValue = irandom(ds_list_size(global.EarthDungeonFodder) - 1);
+ global.EarthDungeonValueUse = ds_list_find_value(global.EarthDungeonFodder, global.EarthDungeonValue);
+ 
+
 
 
 

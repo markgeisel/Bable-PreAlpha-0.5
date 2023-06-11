@@ -5,6 +5,9 @@
 event_inherited();
 aggro = 0; 
 state = EnemySTATE.CHASE;
+
+
+
 _Lighting=0;
 
 sprAttack = dreiliftbigAttack;
@@ -14,6 +17,15 @@ sprMoveR = dreiliftbigwalkRight1;
 sprMoveL= dreiliftbigwalkLeft;
 sprMoveD = dreiliftbigwalkDown;
 sprMoveU = dreiliftbigwalkUp;
+
+
+sprMoveRA = DruagarRightAttack;
+sprMoveLA= DruagarLeftAttack;
+sprMoveDA =  DruagarDownAttack;
+sprMoveUA =  DruagarUpAttack;
+
+
+
 
 
 invulnerable = 0; 
