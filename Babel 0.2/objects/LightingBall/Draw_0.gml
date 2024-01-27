@@ -3,8 +3,7 @@
 
 
 
-	draw_sprite(Shadow,0,floor(x),floor(y+5));
-	draw_sprite_ext(Sprite438,-1,floor(x),floor(y+z),1,1,direction,c_white,100)
+	draw_sprite_ext(Bolt,-1,floor(x),floor(y+z),image_xscale,image_yscale,0,c_white,100)
 
 
 

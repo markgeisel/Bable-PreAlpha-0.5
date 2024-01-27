@@ -7,7 +7,7 @@ i=0
 change=0
 left1=0
 left=0
-		   depth = - 950
+	size=1	   depth = - 950
 global.page=1 
  posy=y-150
  sprite_index=_border482483483

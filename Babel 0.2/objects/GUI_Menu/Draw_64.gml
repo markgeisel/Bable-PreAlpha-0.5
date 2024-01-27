@@ -3,7 +3,7 @@ display_set_gui_size(1920,1080 );
  //max 138
  //-71
 
-display_set_gui_size(384, 192);
+display_set_gui_size(384, 216);
 var playerskillpoints=	global.playerskillpoints;
 
 if changepage = 1 {

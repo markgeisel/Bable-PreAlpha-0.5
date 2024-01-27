@@ -1,7 +1,7 @@
 if instance_exists(target)
 
-{x= target.x
-y= target.y
+{x= round( target.x)
+y= round( target.y)
  z = target.z
 flags=eLightFlags.Dirty
 

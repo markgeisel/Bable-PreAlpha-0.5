@@ -3,7 +3,7 @@
 if instance_exists(oDungeon) {
 
 	
-if oDungeon.count =2 && oDungeon.roomList[| (ds_list_size(oDungeon.roomList) -9)]&&oDungeon.roomList[|8].c=3
+if oDungeon.count =2 && oDungeon.roomList[| (ds_list_size(oDungeon.roomList) -9)]
 {
 
 
@@ -15,18 +15,11 @@ OGoblin.x = x
 OGoblin.y = y 
 
 
+if count >35{
+	OGoblin.state=Playerstate_free
 
 
-
+}
+count++ 	
 }}
 
-if !instance_exists(oDungeon) {
-if count < 60{
-	OGoblin.state=Playerstate_free
-instance_destroy()
-count++ 	
-}
-
-
-
-}

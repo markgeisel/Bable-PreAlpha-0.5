@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function GoblinHurt(){
 
-Enemyspeed=1;
+Enemyspeed=3;
 TweenEasyScale(1,1,1.3,1.3,0,8,ease_in_quad,TWEEN_MODE_BOUNCE)
 
 
@@ -26,6 +26,7 @@ x = xTo;
 y = yTo;
 stateTarget= EnemySTATE.CHASE;
 		sateWaitDuration = 10;
+		dir=dir-180
 		state = EnemySTATE.WAIT;
 spawn=0
 }

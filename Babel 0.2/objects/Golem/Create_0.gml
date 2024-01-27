@@ -25,7 +25,7 @@ sprHurt = Ice_Crown_Hurt;
 
 invulnerable = 0; 
 enemyScript[EnemySTATE.WANDER]= GoblinWander145;
-enemyScript[EnemySTATE.CHASE]= GoblinChaseDiv;
+enemyScript[EnemySTATE.CHASE]= GoblinChaseDruagr;
 enemyScript[EnemySTATE.ATTACK]= GoblinAttackDiv;
 enemyScript[EnemySTATE.HURT] = GoblinHurt;
 enemyScript[EnemySTATE.DIE] =GoblinDie;

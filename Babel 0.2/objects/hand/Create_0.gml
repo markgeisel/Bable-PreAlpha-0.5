@@ -7,8 +7,8 @@ aggro = 0;
 state = EnemySTATE.WANDER;
 _Lighting=0;
 sprMove = handwalkright;
-
-
+Healthbar=0
+deathtimer=0
 target=Player
 sprAttack = handattackright ;
 sprDie = handwalkright;
@@ -20,4 +20,4 @@ enemyScript[EnemySTATE.ATTACK]= GoblinAttack;
 enemyScript[EnemySTATE.HURT] = GoblinHurt;
 enemyScript[EnemySTATE.DIE] =GoblinDie;
 invulnerable = max(invulnerable-1,0)
-can_collide = true
+can_collide = false

@@ -23,7 +23,7 @@ function NewText() {
 				var _markerPosition = string_pos (":", responses[i]) ;
 				responseScripts [i] = string_copy(responses[i],1,_markerPosition-1);
 				responseScripts[i] = real(responseScripts[i]);
-				responses[i] = string_delete(responses[i],1,_markerPosition);
+				
 			}
 		
 			}

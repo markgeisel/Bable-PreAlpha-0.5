@@ -1,8 +1,8 @@
-alarm[0] = 480 
+alarm[0] = 160 
 image_alpha=1
 size=1	
 y = y - 40
-z=+410
+z=+360
 counter =0 
 damage2=""
 counter1 = 0

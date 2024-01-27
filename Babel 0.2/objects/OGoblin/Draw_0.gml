@@ -1,15 +1,13 @@
-
+ 
 draw_sprite(Shadow,0,floor(x),floor(y));
 
 draw_sprite(Crosshair,1,crosshairX,crosshairY);
 
 
 
-if instance_exists(oDungeon){
-value = global.IceDungeonValue	
-	
 
-}
+
+
 if (invulnerable !=0)&&((invulnerable mod 8<2)==0)&&(flash==0)
 
 
@@ -27,9 +25,7 @@ else{
 		if state != Playerstate_free && state != Playerstate_locked && state != Playerstate_transition && state !=  Playerstate_dodge
 		
 		{
-		
-	draw_sprite_ext(VeparRight,frame,x-14,y-10,1,1,0,c_white,1)
-		draw_sprite_ext(VeparRightAttack,-1,x-14,y-10,1,1,0,c_white,01)
+		draw_sprite_ext(VeparRightAttack,frame,x-14,y-10,1,1,0,c_white,0.8)
 		}else{
 		
 		
@@ -50,9 +46,8 @@ else{
 		if state != Playerstate_free && state != Playerstate_locked && state != Playerstate_transition && state !=  Playerstate_dodge
 		
 		{
-		
-	draw_sprite_ext(VeparLeft,frame,x+6,y-10,1,1,0,c_white,1)
-		draw_sprite_ext(VeparLeftAttack,-1,x+6,y-10,1,1,0,c_white,01)
+	
+			draw_sprite_ext(VeparLeftAttack,frame,x+6,y-10,1,1,0,c_white,0.8)
 		}else{
 		
 		
@@ -68,8 +63,8 @@ else{
 		
 		{
 		
-	draw_sprite_ext(VeparDown,frame,x-5,y-10,1,1,0,c_white,1)
-		draw_sprite_ext(VeparDownAttack,-1,x-5,y  -10,1,1,0,c_white,01)
+	
+			draw_sprite_ext(VeparDownAttack,frame,x-5,y-10,1,1,0,c_white,0.8)
 		}else{
 		
 		
@@ -84,9 +79,7 @@ else{
 		if state != Playerstate_free && state != Playerstate_locked && state != Playerstate_transition&& state != Playerstate_dodge
 		
 		{
-		
-	draw_sprite_ext(VeparRight,frame,x-14,y-10,1,1,0,c_white,1)
-		draw_sprite_ext(VeparRightAttack,-1,x-14,y  -10,1,1,0,c_white,01)
+			draw_sprite_ext(VeparRightAttack,frame,x-14,y-10,1,1,0,c_white,0.8)
 		}else{
 		
 		
@@ -108,8 +101,7 @@ else{
 		if state != Playerstate_free && state != Playerstate_locked && state != Playerstate_transition && state !=  Playerstate_dodge
 		
 		{
-		
-	draw_sprite_ext(AmonRight,frame,x-14,y-10,1,1,0,c_white,1)
+
 		draw_sprite_ext(AmonRightAttack,-1,x-14,y-10,1,1,0,c_white,01)
 		}else{
 		
@@ -126,8 +118,7 @@ else{
 		if state != Playerstate_free && state != Playerstate_locked && state != Playerstate_transition && state !=  Playerstate_dodge
 		
 		{
-		
-	draw_sprite_ext(AmonLeft,frame,x+6,y-10,1,1,0,c_white,1)
+
 		draw_sprite_ext(AmonLeftAttack,-1,x+6,y-10,1,1,0,c_white,01)
 		}else{
 		
@@ -142,7 +133,6 @@ else{
 		
 		{
 		
-	draw_sprite_ext(AmonDown,frame,x-5,y-10,1,1,0,c_white,1)
 		draw_sprite_ext(AmonDownAttack,-1,x-5,y  -10,1,1,0,c_white,01)
 		}else{
 		
@@ -157,8 +147,7 @@ else{
 		if state != Playerstate_free && state != Playerstate_locked && state != Playerstate_transition&& state != Playerstate_dodge
 		
 		{
-		
-	draw_sprite_ext(AmonRight,frame,x-14,y-10,1,1,0,c_white,1)
+
 		draw_sprite_ext(AmonRightAttack,-1,x-14,y  -10,1,1,0,c_white,01)
 		}else{
 		
@@ -392,14 +381,13 @@ if direction >  45 && direction < 135 && form== 1 {
 		if state != Playerstate_free && state != Playerstate_locked && state != Playerstate_transition  && state != Playerstate_dodge
 		
 		{
-		
-	draw_sprite_ext(VeparUp,frame,x-5,y-10,1,1,0,c_white,1)
-		draw_sprite_ext(VeparUpAttack,-1,x-5,y-10,1,1,0,c_white,01)
+	draw_sprite_ext(VeparUpAttack,frame,x-5,y-10,1,1,0,c_white,0.8)
 		}else{
 		
 		
 			draw_sprite_ext(VeparUp,frame,x-5,y-10,1,1,0,c_white,0.8)
 		}}
+
 
 
 

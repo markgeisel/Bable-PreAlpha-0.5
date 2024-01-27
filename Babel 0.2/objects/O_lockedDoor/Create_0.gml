@@ -5,3 +5,7 @@
 event_inherited();
 float =1;
 
+trigger=0
+
+timer=0
+image_speed=0

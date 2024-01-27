@@ -27,8 +27,8 @@ function Stomp() {
 		distanceTotal = point_distance(x,y,targetX,targetY);
 		distanceRemaining = distanceTotal;
 	peakHeight = min(max(0,distanceTotal - 64)*0.2,150);
-			spd =2
-		invulnerable=60;
+			spd =4
+		invulnerable=15;
 		
 	}
 

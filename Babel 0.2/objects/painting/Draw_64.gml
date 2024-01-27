@@ -12,13 +12,11 @@ draw_sprite(Sprite499,-1,x+852,y+1400)
 
 draw_text(x+300,+250,y)
 
-display_set_gui_size(384, 192);
+display_set_gui_size(384, 216);
 
 }
 
-display_set_gui_size(1920,1080 );
 
-display_set_gui_size(384, 192);
 }
 
 

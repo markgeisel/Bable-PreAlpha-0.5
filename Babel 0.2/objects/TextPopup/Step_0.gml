@@ -28,7 +28,7 @@ z = -5
 
 count ++ 
 
-if count > 100 {
+if count > 60 {
 
 trigger = 2 
 }
@@ -40,7 +40,7 @@ if trigger = 2 {
 
 if counter == 0 {
 
-z+=1
+z+=2
 
 }
 counter++
@@ -48,7 +48,7 @@ if counter > 2{
 counter = 0
 
 }
-image_alpha -= 0.005;
+image_alpha -= 0.015;
 
 
 }

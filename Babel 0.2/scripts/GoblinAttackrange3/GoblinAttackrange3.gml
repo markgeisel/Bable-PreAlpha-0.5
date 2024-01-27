@@ -2,7 +2,7 @@ function GoblinAttackrange3() {
 	var _spd = Enemyspeed;
 
 	if (image_index<2) _spd=0;
-	if (floor(image_index)== 3){ with (instance_create_layer(x,y-20,"Instances",enemyflamethrower108))
+	if (floor(image_index)== 3){ with (instance_create_layer(x,y-20,"Instances",enemyflamethrower2))
 	{
 
 		targetX = OGoblin.x;  

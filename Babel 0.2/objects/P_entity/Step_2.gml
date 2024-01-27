@@ -5,7 +5,7 @@ if (!global.gamePaused)
 	{ if (OGoblin.sprite_index != Mage_idle)
 	  {x=OGoblin.x  ;
 	   y=OGoblin.y ;
-	   z=27;
+	   z=20;
 	   depth = OGoblin.depth+1; 
 	  
 	  }				
@@ -46,13 +46,3 @@ if (!global.gamePaused)
 }
 if Health= 0 {instance_destroy()}
 
-
-fire=max(fire-0.005,0);
-fflash = max(fflash-0.005,0);
-iflash = max(iflash-0.005,0);
-Ice = max(Ice-0.005,0);
-Lighting=max(Lighting-0.005,0);
-lflash=max(lflash-0.005,0);
-eflash=max(eflash-0.005,0);
-Earth = max(Earth-0.005,0);
-flash=max(flash-0.005,0);

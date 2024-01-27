@@ -25,7 +25,11 @@ OGoblin.direction = point_direction(x,y,crosshairX,crosshairY);
 	
 
 		 with (instance_create_layer(OGoblin.x,OGoblin.y-16,"Instances",firebullet))
-	{
+	{if global.Rati=1{
+		if OGoblin.Mana>=OGoblin.manamax-1.1{
+		
+		manamax=1
+		}}
 		image_index=4
 		targetX = OGoblin.crosshairX;
 		targetY = OGoblin.crosshairY;
@@ -33,7 +37,7 @@ OGoblin.direction = point_direction(x,y,crosshairX,crosshairY);
 		distanceTotal = point_distance(x,y,targetX,targetY);
 		distanceRemaining = distanceTotal;
 	peakHeight = min(max(0,distanceTotal - 32)*0.9,32);
-			spd = 2;
+			spd = 2*OGoblin.attackspeed;
 	}
 
 		state= Playerstate_free

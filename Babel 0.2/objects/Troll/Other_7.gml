@@ -1,4 +1,7 @@
-state=EnemySTATE.CHASE
+
+if state=EnemySTATE.SPAWN{
+
+state = EnemySTATE.CHASE;}
 
 
 

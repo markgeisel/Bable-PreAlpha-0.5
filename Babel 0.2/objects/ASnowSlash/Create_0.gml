@@ -9,3 +9,6 @@ counter=0
   dir=0
 count=0
 
+
+_damage=0.6
+EnemyHit=1

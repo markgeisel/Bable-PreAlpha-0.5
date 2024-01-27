@@ -1,9 +1,9 @@
 
 if other.invulnerable ==0&&other.state!=EnemySTATE.DIE{	
-with other {HurtEnemy_Stomp(id,0.3(global.Earthdmgprecent),other.id,2,0,0,0,1);}
+with other {HurtEnemy_Stomp(id,0.3,other.id,2,0,0,0,1);}
 
- Health--
-
+part_particles_create(global.ps,(x),(y),global.pt_MudBulleteffect1,10);
+ instance_destroy();
  }
-if Health==0{
- instance_destroy();}
+
+	

@@ -17,7 +17,7 @@ function CaculateAttk_Fire_Flower(argument0) {
 				  
 					 if (object_is_ancestor(object_index,P_Enemy))
 					 {
-						 HurtEnemy_Fire_Flower(id,2,other.id,16,0,1,0,0);
+						 HurtEnemy_Fire_Flower(id,1,other.id,16,0,1,0,0);
 				      
 				 
 					 }

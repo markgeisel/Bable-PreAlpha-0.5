@@ -20,6 +20,7 @@ function GoblinAttackrange() {
 	{stateTarget= EnemySTATE.CHASE;
 		sateWaitDuration = 3;
 		state = EnemySTATE.WAIT;
+		attack=0 
 
 	}
 	}

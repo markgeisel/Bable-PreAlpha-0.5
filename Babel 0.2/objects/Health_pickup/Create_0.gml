@@ -5,3 +5,4 @@
 event_inherited();
 
 float = 1 
+counter=0

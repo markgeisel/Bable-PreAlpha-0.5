@@ -8,6 +8,8 @@ Cullcounter++
 
 
 
+
+
 if hit>0{climb=climb+0.10
 
 }

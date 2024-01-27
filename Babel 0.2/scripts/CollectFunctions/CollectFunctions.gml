@@ -5,10 +5,10 @@ global.playercoin +=_amount
 }
 
 
-function Collectgrail(_amount){
+function Collectgrail(_amount){//finished
 
 global.HolyGrail +=_amount
-
+OGoblin.speedWalk += OGoblin.speedWalk*0.10
 
 	inventoryadd(Oinventory,1);
 
@@ -21,14 +21,14 @@ global.HolyGrail +=_amount
 
 }
 
-function CollectThorns(_amount){
+function CollectThorns(_amount){//finished
 
 global.Thorns +=_amount
 
 	inventoryadd(Oinventory,2);
 
 
-
+OGoblin.damagemultiplier+=0.05
 
 
 
@@ -53,10 +53,10 @@ global.Shard +=_amount
 
 }
 
-function CollectIronCrown(_amount){
+function CollectIronCrown(_amount){//Finished
 
 global.IronCrown +=_amount
-
+global.Earthdmgprecent+=0.1
 	inventoryadd(Oinventory,4);
   
 
@@ -86,10 +86,10 @@ global.HolyLance +=_amount
 }
 
 
-function CollectReichskrone(_amount){
+function CollectReichskrone(_amount){//Finished
 
 global.Reichskrone +=_amount
-
+global.Maxplayerhealth+=global.Maxplayerhealth*0.1
 
 	inventoryadd(Oinventory,6);
 
@@ -99,14 +99,14 @@ global.Reichskrone +=_amount
 
 }
 
-function CollectDeadSeaScroll(_amount){
+function CollectDeadSeaScroll(_amount){//Finished
 global.DeadSeaScroll +=_amount
 
 
 	inventoryadd(Oinventory,7);
 
-
-
+OGoblin.manamax++
+OGoblin.ManaIncreaseRate+=0.1
 
 }
 
@@ -114,11 +114,11 @@ global.DeadSeaScroll +=_amount
 
 
 
-function CollectFigureOfVenus(_amount){
+function CollectFigureOfVenus(_amount){//Finished
 
 global.FigureOfVenus +=_amount
-
-
+var speedchange = OGoblin.speeddodge*0.1
+OGoblin.speeddodge+=speedchange
 	inventoryadd(Oinventory,8);
 
 
@@ -126,7 +126,7 @@ global.FigureOfVenus +=_amount
 
 
 }
-function CollectKabbalah(_amount){
+function CollectKabbalah(_amount){//Finished
 
 global.Kabbalah +=_amount
 
@@ -142,10 +142,10 @@ global.Kabbalah +=_amount
 
 
 }
-function CollectMenorah(_amount){
+function CollectMenorah(_amount){//finished
 
 global.Menorah +=_amount
-
+global.Firedmgprecent+=0.10
 
 	inventoryadd(Oinventory,10);
 
@@ -161,12 +161,12 @@ global.Menorah +=_amount
 
 
 }
-function CollectDavidsSling(_amount){
+function CollectDavidsSling(_amount){//Finished
 
 
 global.DavidsSling +=_amount
 
-
+OGoblin.damagemultiplier+=0.05
 
 
 
@@ -183,13 +183,14 @@ global.DavidsSling +=_amount
 
 
 }
-function CollectDreidel(_amount){
+function CollectDreidel(_amount){//Finished
 
 
 
 
 global.Dreidel +=_amount
-
+    
+OGoblin.critchance+=0.05
 	inventoryadd(Oinventory,12);
 
 
@@ -198,25 +199,24 @@ global.Dreidel +=_amount
 
 
 }
-function CollectScrollOfJohn(_amount){
-if Oinventory268.I > 0{
-	inventoryadd(Oinventory,13);
+function CollectScrollOfJohn(_amount){//finished
 
-}
 
 global.ScrollOfJohn +=_amount
-if Oinventory268.I = 0{
+
 	inventoryadd(Oinventory,13);
+ 	
+OGoblin.ManaMultiplier+=0.10
+OGoblin.damagemultiplier+=0.05
+
+
+
+
+
+
 
 }
-
-
-
-
-
-
-}
-function CollectSwordOfAli(_amount){
+function CollectSwordOfAli(_amount){//Finished
 
 global.SwordOfAli +=_amount
 
@@ -224,8 +224,8 @@ global.SwordOfAli +=_amount
 	inventoryadd(Oinventory,14);
 
 
-
-
+OGoblin.damagemultiplier+=0.05
+OGoblin.attackspeed*=1.2
 
 
 
@@ -235,11 +235,12 @@ global.SwordOfAli +=_amount
 
 }
 
-function CollectSwordOfDavid(_amount){
+function CollectSwordOfDavid(_amount){//Finished
 
 global.SwordOfDavid +=_amount
 
-
+OGoblin.damagemultiplier+=0.05
+OGoblin.knockback=OGoblin.knockback*2
 	inventoryadd(Oinventory,15);
 
 
@@ -260,11 +261,10 @@ global.PotOfAbe +=_amount
 
 	
 }
-function CollectRodOfArron(_amount){
+function CollectRodOfArron(_amount){//Finished
 
 	inventoryadd(Oinventory,17);
-    
-
+global.Icedmgprecent+=0.10
 global.RodOFArron +=_amount
 
 
@@ -289,10 +289,10 @@ global.JosephsTurban +=_amount
 
 }
 
-function CollectSandles(_amount){
+function CollectSandles(_amount){//Finished
 
 global.Sandles +=_amount
-
+OGoblin.speedWalk += OGoblin.speedWalk*0.10
 	inventoryadd(Oinventory,19);
 
 
@@ -306,11 +306,8 @@ global.Sandles +=_amount
 
 
 
-function  CollectDraupnir(_amount){
-if Oinventory268.I > 0{
-	inventoryadd(Oinventory,20);
+function  CollectDraupnir(_amount){//Finished
 
-}
 
 
 global.Draupnir +=_amount
@@ -326,11 +323,11 @@ global.Draupnir +=_amount
 }
 
 
-function  CollectBrisingamen(_amount){
+function  CollectBrisingamen(_amount){//Finished
 
 	inventoryadd(Oinventory,21);
 
-
+OGoblin.ManaIncreaseRate+=0.2
 global.Brisingamen +=_amount
 
 
@@ -349,7 +346,7 @@ global.Eldhrimnir +=_amount
 
 
 
-	inventoryadd(Oinventory,22);
+	inventoryadd(Oinventory,23);
 
 
 
@@ -367,7 +364,7 @@ function CollectHymers(_amount){
 
 global.Hymers +=_amount
 
-	inventoryadd(Oinventory,23);
+	inventoryadd(Oinventory,22);
 
    
 
@@ -380,7 +377,7 @@ function  CollectSvalinn(_amount){
 
 global.Svalinn +=_amount
 
-
+global.Firedmgprecent+=0.1
 	inventoryadd(Oinventory,24);
 
 
@@ -396,6 +393,9 @@ function  CollectGungnir(_amount){
 global.Gungnir +=_amount
 
 	inventoryadd(Oinventory,25);
+
+OGoblin.manamax++
+
 
 
 
@@ -413,7 +413,7 @@ global.Mjolnir +=_amount
 
 	inventoryadd(Oinventory,26);
 
-
+global.Lightningdmgprecent+=0.1
 
 
 
@@ -422,8 +422,18 @@ global.Mjolnir +=_amount
 function CollectMegingjord(_amount){
 
 global.Megingjord +=_amount
-
+global.Maxplayerhealth+=global.Maxplayerhealth*0.1
 	inventoryadd(Oinventory,27);
+   
+ 	
+}
+
+function Collectjagnglofar(_amount){
+
+global.jagnglofar +=_amount
+OGoblin.damagemultiplier+=0.05
+OGoblin.knockback=OGoblin.knockback*2
+	inventoryadd(Oinventory,28);
    
  	
 
@@ -432,3 +442,268 @@ global.Megingjord +=_amount
 
 
 }
+
+
+function CollectLavateinn(_amount){
+
+global.Lavateinn +=_amount
+OGoblin.critchance+=0.05
+	inventoryadd(Oinventory,29);
+   
+ 	
+
+
+
+
+
+}
+
+
+
+function CollectRati(_amount){
+
+global.Rati +=_amount
+
+	inventoryadd(Oinventory,30);
+   
+ 	
+
+
+
+
+
+}
+
+
+
+function CollectHelskor(_amount){
+
+global.Helskor +=_amount
+OGoblin.speedWalk += OGoblin.speedWalk*0.10
+	inventoryadd(Oinventory,31);
+   
+ 	
+
+
+
+
+
+}
+
+
+
+
+
+
+function CollectGram(_amount){
+
+global.Gram +=_amount
+
+	inventoryadd(Oinventory,32);
+   
+ 	
+
+
+
+
+
+}
+
+
+
+
+
+function CollectAmuletOfEri(_amount){
+
+global.AumletOfEri +=_amount
+
+	inventoryadd(Oinventory,33);
+   
+ 	
+
+
+
+
+
+}
+
+
+function CollectBowofUllr(_amount){
+
+global.BowofUllr +=_amount
+
+	inventoryadd(Oinventory,34);
+   OGoblin.slowfall/=2
+ 	
+OGoblin.damagemultiplier+=0.05
+
+
+
+
+}
+
+
+function CollectHeartOfYmir(_amount){
+
+global.HeartOfYmir +=_amount
+
+	inventoryadd(Oinventory,35);
+OGoblin.SlowAmount-=0.15
+ 	
+
+
+
+
+
+}
+
+
+function CollectBootsOfVioarr(_amount){
+
+global.BootsOfVioarr +=_amount
+OGoblin.DamageReduction-=0.05
+	inventoryadd(Oinventory,36);
+
+ 	
+
+
+
+
+
+}
+
+
+
+
+function CollectForsetiAxe(_amount){
+
+global.ForsetiAxe +=_amount
+global.Icedmgprecent+=0.1
+	inventoryadd(Oinventory,37);
+
+ 	
+
+
+
+
+
+}
+
+
+
+function CollectDwellersRing(_amount){
+
+global.DwellersRing +=_amount
+
+	inventoryadd(Oinventory,38);
+
+ 	
+
+
+
+
+
+}
+
+
+
+
+function CollectTryfing(_amount){
+
+global.Tryfing +=_amount
+
+	inventoryadd(Oinventory,39);
+
+ 	
+
+
+
+
+
+}
+
+
+
+function CollectGunnarsAtgeir(_amount){
+
+global.GunnarsAtgeir +=_amount
+
+	inventoryadd(Oinventory,40);
+
+ 	
+
+
+
+
+
+}
+
+function CollectSurtrsSword(_amount){
+
+global.SurtrsSword +=_amount
+
+	inventoryadd(Oinventory,41);
+
+ 	
+   OGoblin.firefall*=0.70
+
+
+
+
+}
+
+function CollectSurtrsHeart(_amount){
+
+global.SurtrsHeart +=_amount
+
+	inventoryadd(Oinventory,42);
+
+ 	
+   OGoblin.burnprecent*=1.5
+
+
+}
+
+function CollectSurtalogi(_amount){
+
+global.Surtalogi +=_amount
+
+	inventoryadd(Oinventory,43);
+
+ 	
+global.Firedmgprecent+=0.1
+
+
+
+
+}
+
+function CollectBloodOfYmir(_amount){
+
+global.BloodOfYmir +=_amount
+
+	inventoryadd(Oinventory,44);
+
+ 	
+OGoblin.ManaMultiplier+=0.10
+OGoblin.damagemultiplier+=0.05
+
+
+
+}
+
+function CollectFleshOfYmir(_amount){
+
+global.BloodOfYmir +=_amount
+
+	inventoryadd(Oinventory,45);
+
+ 	
+OGoblin.DamageReduction +=0.05
+global.Maxplayerhealth+=global.Maxplayerhealth*0.1
+
+
+}
+
+
+

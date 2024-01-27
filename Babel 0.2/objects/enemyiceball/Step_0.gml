@@ -23,8 +23,12 @@ hspeed = lengthdir_x(spd, dir);
 	percent = (distanceTotal-distanceRemaining) / distanceTotal;
 	z = -peakHeight * sin(percent * pi);	
 if (!global.gamePaused){
-spd=spd+0.025}
+spd=spd+0.015}
 		image_alpha -= 0.005;
+		if image_alpha == 0 {
+		instance_destroy()
+		
+		}
 	image_xscale *= 1;
 	image_yscale = image_xscale;
 if t > 300 {

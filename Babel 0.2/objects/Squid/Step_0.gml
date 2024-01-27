@@ -1,10 +1,14 @@
  event_inherited();
 
 
+ if state=EnemySTATE.SPAWN
+ {
  
+ invulnerable=10 
+ }
 
 
-if state !=EnemySTATE.ATTACK{
+if state !=EnemySTATE.ATTACK&&state !=EnemySTATE.SPAWN&& state!= EnemySTATE.DIE{
 
 var display_dir = round(((dir) mod 360) / 90);
 

@@ -1,2 +1,2 @@
-instance_create_layer(x,y,"Instances_1",LightingStrike,)
+instance_create_layer(x,y,"Instances",LightingStrike)
 instance_destroy()

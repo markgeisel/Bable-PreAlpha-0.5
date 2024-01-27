@@ -1,7 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Playerstate_dead(){
-	
+
+
 
 	hSpeed =0
 	vSpeed =0 
@@ -24,6 +25,8 @@ sprite_index = Mage_Death
 image_speed =1;
 		invulnerable=400
 
+	LoadGame(global.gamesaveslot)
+	state=Playerstate_free
 }
 }
 else{image_speed=0; 

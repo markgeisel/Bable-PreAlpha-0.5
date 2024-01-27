@@ -3,19 +3,25 @@
 
 // Inherit the parent event
 event_inherited();
+small=1
+knockable=0
 aggro = 0; 
-state = EnemySTATE.ATTACK;
+state = EnemySTATE.SPAWN;
 _Lighting=0;
 sprMove = BigIce;
 sprAttack = snowpounder;
-sprDie = Ice_Crown_Die;
-sprHurt = Ice_Crown_Hurt;
+sprDie = snowthrowerDeath;
+sprHurt = snowpounder;
 invulnerable = 0; 
 enemyScript[EnemySTATE.WANDER]= GoblinWander;
 enemyScript[EnemySTATE.CHASE]= GoblinChase;
-
-
+enemyScript[EnemySTATE.HURT]= GoblinHurt142;
+pound=20
+enemyScript[EnemySTATE.SPAWN]= GoblinSpawn;
 enemyScript[EnemySTATE.DIE] =GoblinDie;
 invulnerable = max(invulnerable-1,0)
 can_collide = true
 target=Player;
+X=x
+Y=y
+dirchange=0

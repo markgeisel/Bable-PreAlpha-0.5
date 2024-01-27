@@ -1,5 +1,10 @@
 event_inherited();
 Cullcounter ++
+
+
+small=1
+
+
 if Skin < 1 {
 
 
@@ -8,6 +13,12 @@ sprAttack = BabyTrollAttack;
 sprDie = BabyTrollWalk;
 sprHurt = BabyTrollWalk;
 } 
+
+ if state=EnemySTATE.SPAWN
+ {
+ 
+ invulnerable=10 
+ }
 
 
 if Skin >= 1 && Skin <= 2  {

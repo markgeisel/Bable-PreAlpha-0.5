@@ -1,6 +1,6 @@
  z=  0;
 flash=0;
-state= e_state.idle;
+boss=0
 lifted = 0;
 g=random_range(450000,550000)
 entity_targetX  =	0;	
@@ -11,8 +11,8 @@ lflash=0;
 eflash=0;
 Uflash=0;
 anger= false;
-
- 
+attack=0
+ state=0
  thrown = false ;
  float = 0 ;
 LFlash = shader_get_uniform(sLighting,"lflash");
@@ -21,7 +21,6 @@ FFlash = shader_get_uniform(sBurn,"fflash");
 EFlash = shader_get_uniform(sEarth,"eflash");
 Uflash=shader_get_uniform(sFlash,"uflash")
 EntityDropList = -1 
-
 
 
 Ice = 0; 

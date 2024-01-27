@@ -12,7 +12,7 @@ sprMove = BabyTrollWalk;
 sprAttack = BabyTrollAttack;
 sprDie = BabyTrollWalk;
 sprHurt = BabyTrollWalk;
-
+sprSpawn= BabyTrollSpawn
 
 
 target=Player
@@ -49,17 +49,19 @@ sprHurt = BabyTroll2Walk;
 
 
 
-state = EnemySTATE.WANDER;	
+state = EnemySTATE.SPAWN;	
 
 
 
 invulnerable = 0; 
 enemyScript[EnemySTATE.WANDER]= GoblinWander;
+
+enemyScript[EnemySTATE.SPAWN]= GoblinSpawn;
 enemyScript[EnemySTATE.CHASE]= GoblinChase;
 enemyScript[EnemySTATE.ATTACK]= GoblinAttack;
 enemyScript[EnemySTATE.HURT] = GoblinHurt;
 enemyScript[EnemySTATE.DIE] =GoblinDie;
 invulnerable = max(invulnerable-1,0)
 can_collide = true
-enemyHP=0.5;
+enemyHP=1.2;
 EnemyhpOrginal=enemyHP

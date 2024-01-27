@@ -4,7 +4,7 @@ if room == rmDungeon4{
 
 
 if instance_exists(oDungeon3) {
-if oDungeon3.count =2 &&oDungeon.roomList[| (ds_list_size(oDungeon3.roomList) -8)]&&oDungeon3.roomList[|8].c=3{
+if oDungeon3.count =2 &&oDungeon.roomList[| (ds_list_size(oDungeon3.roomList) -8)]&&oDungeon3.roomList[|8].c<=4{
 
 x=((oDungeon3.roomList[| 3].x1+oDungeon3.roomList[| 3].x2+1)/2)*32
 y= ((oDungeon3.roomList[| 3].y1+oDungeon3.roomList[| 3].y2+1)/2)*32
@@ -145,7 +145,7 @@ if room == rmDungeon2{
 
 
 if instance_exists(oDungeon) {
-if oDungeon.count =2 &&oDungeon.roomList[| (ds_list_size(oDungeon.roomList) -8)]&&oDungeon.roomList[|8].c=3{
+if oDungeon.count =2 {
 
 x=((oDungeon.roomList[| 3].x1+oDungeon.roomList[| 3].x2+1)/2)*32
 y= ((oDungeon.roomList[| 3].y1+oDungeon.roomList[| 3].y2+1)/2)*32
@@ -211,166 +211,131 @@ instance_destroy()
 
 }
 
-
-if room == rmDungeon{
-
+if room == rmDungeon||room == rmDungeon_1{
 
 if instance_exists(oDungeon) {
-if oDungeon.count =2 &&oDungeon.roomList[| (ds_list_size(oDungeon.roomList) -8)]&&oDungeon.roomList[|8].c=3{
-
-x=((oDungeon.roomList[| 3].x1+oDungeon.roomList[| 3].x2+1)/2)*32
-y= ((oDungeon.roomList[| 3].y1+oDungeon.roomList[| 3].y2+1)/2)*32
+if oDungeon.count =2 {
+x=(((oDungeon.roomList[| 3].x1+oDungeon.roomList[| 3].x2+1)/2)*32)
+y= (((oDungeon.roomList[| 3].y1+oDungeon.roomList[| 3].y2+1)/2)*32)
 
 
 }}
-	value =  global.IceDungeonValueUse
-value1 = global.IceDungeonValueUse
+
+		value =  global.IceDungeonValue
 if spawn = 0 
 {
-if(instance_exists(target))&&(point_distance(x,y,target.x,target.y)<= 130)
+	
+if touch=1 
 {
-
-RangeTime++
-	if RangeTime >= 45
-	{
+spawn = 1 
 	
 switch(global.IceDungeonValueUse)
 {
 case 1:
-instance_create_layer(x-8,y+8,"Instances",E1)
+encounter1()
 
-instance_create_layer(x-10,y,"Instances",E5)
-instance_create_layer(x+10,y,"Instances",E5)
-break;
+
+break
 case 2:
-instance_create_layer(x+8,y+16,"Instances",E6)
-instance_create_layer(x-16,y,"Instances",E6)
-instance_create_layer(x,y+16,"Instances",E6)
-instance_create_layer(x-8,y+8,"Instances",E6)
-instance_create_layer(x+8,y+8,"Instances",E6)
-instance_create_layer(x-16,y-8,"Instances",E6)
-instance_create_layer(x+-8,y-16,"Instances",E6)
-instance_create_layer(x+-8,y-16,"Instances",E6)
+encounter2()
 break;
 case 3:
-instance_create_layer(x+10,y-16,"Instances",E4)
-instance_create_layer(x-10,y-16,"Instances",E1)
+encounter3()
 
 break;
 case 4:
-instance_create_layer(x+10,y-16,"Instances",E4)
-instance_create_layer(x-10,y-16,"Instances",E5)
-instance_create_layer(x+10,y-16,"Instances",E5)
+encounter4()
 break;
 case 5:
-instance_create_layer(x-8,y+8,"Instances",E1)
-
-instance_create_layer(x-10,y,"Instances",E6)
-instance_create_layer(x+10,y,"Instances",E6)
-instance_create_layer(x-10,y-10,"Instances",E6)
-instance_create_layer(x+10,y-10,"Instances",E6)
+encounter5()
 break;
 case 6:
-instance_create_layer(x+10,y-16,"Instances",E4)
-instance_create_layer(x-10,y-16,"Instances",E6)
-instance_create_layer(x+10,y-16,"Instances",E6)
-instance_create_layer(x-10,y-8,"Instances",E6)
-instance_create_layer(x+10,y-8,"Instances",E6)
+encounter6()
 break;
 case 7:
-instance_create_layer(x-8,y+8,"Instances",E1)
-instance_create_layer(x,y+8,"Instances",E1)
 
+encounter7()
 break
 case 8:
-instance_create_layer(x-8,y+8,"Instances",E5)
-instance_create_layer(x,y+8,"Instances",E5)
-instance_create_layer(x-10,y,"Instances",E5)
-instance_create_layer(x+10,y,"Instances",E5)
+encounter8()
 break
 case 9:
-instance_create_layer(x+8,y+16,"Instances",E7)
-instance_create_layer(x-16,y,"Instances",E7)
-instance_create_layer(x,y+16,"Instances",E7)
-instance_create_layer(x-8,y+32,"Instances",E7)
-instance_create_layer(x+8,y+8,"Instances",E7)
-instance_create_layer(x-16,y-8,"Instances",E7)
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
+encounter9()
 break;
 case 10:
-instance_create_layer(x+10,y-16,"Instances",E4)
-instance_create_layer(x-10,y-16,"Instances",E7)
-instance_create_layer(x+10,y-16,"Instances",E7)
-instance_create_layer(x-10,y-8,"Instances",E7)
-instance_create_layer(x+10,y-8,"Instances",E7)
-instance_create_layer(x,y,"Instances",E7)
-instance_create_layer(x,y,"Instances",E7)
+encounter10()
 break
 case 11: 
-
-instance_create_layer(x,y+8,"Instances",E1)
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
+encounter11()
 break
-case 13: 
-instance_create_layer(x-10,y-16,"Instances",E6)
-instance_create_layer(x+10,y-16,"Instances",E6)
-instance_create_layer(x-10,y-8,"Instances",E6)
-instance_create_layer(x+10,y-8,"Instances",E6)
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
+case 12: 
+encounter12()
 break
-case 12:
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-8,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+-16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
-instance_create_layer(x+16,y-16,"Instances",E7)
-instance_create_layer(x-10,y,"Instances",E5)
-instance_create_layer(x+10,y,"Instances",E5)
+case 13:
+encounter13()
 break 
-}
+
+case 14:
+encounter14()
+break 
+
+case 15:
+encounter15()
+break 
 
 
+case 16:
+encounter16()
+break 
+
+case 17:
+encounter17()
+break 
+case 18:
+encounter18()
+break 
+case 19:
+encounter19()
+break 
+
+case 20:
+encounter20()
+break 
 
 spawn = 1 
-	}
-
-if(instance_exists(target))&&(point_distance(x,y,target.x,target.y)>= 130)
-{
-RangeTime = 0 
 }
+
+	
+if spawn = 1 {
+if touch = 1 
+{
+with instance_create_layer(x,y,"Barrier",ObjSpikes){
+ target=id
+
+
+}
+spawn=2
+}
+} 
+
 
 
 
 }}
 
 if (instance_exists(P_Enemy))&&(!point_distance(x,y,P_Enemy.x,P_Enemy.y)<= 200)&&spawn==2
-{ 
+{ 	
 
 ds_list_delete(global.IceDungeonFodder,  global.IceDungeonValue);
 
 
  global.IceDungeonValue = irandom(ds_list_size(global.IceDungeonFodder) - 1);
  
+
  global.IceDungeonValueUse = ds_list_find_value(global.IceDungeonFodder, global.IceDungeonValue);
  
 
-
+    show_debug_message("Room 3 Removed value: " + string(value));
 
 
 	

@@ -7,3 +7,4 @@ zSpeed = 0;
 grv = 2;
 depth=-150
 counter=0
+count=0

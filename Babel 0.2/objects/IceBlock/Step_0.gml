@@ -3,13 +3,16 @@
 
 
 
+deathcounter++
 
 
-
-_damage=1+damage+(global.icespike/8);
 xprevious = x;
 	yprevious = y;
 	zprevious = z;
+	
+
+	
+	
 
 len = point_distance(OGoblin.x,OGoblin.y,x,y);
 maxdist = 95;

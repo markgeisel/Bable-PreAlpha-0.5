@@ -8,12 +8,12 @@ state = EnemySTATE.WANDER;
 _Lighting=0;
 sprMoveR = ArghanDivRight;
 sprMoveL= ArghanDivLeft;
-sprMoveD =  ArghanDivDown;
+sprMoveD =  EnemyDownAttackArghanDiv;
 sprMoveU =  ArghanDivUp;
 sprMoveRA = ArghanDivRightAttack;
 sprMoveLA= ArghanDivLeftAttack;
 sprMoveDA =  ArghanDivDownAttack;
-sprMoveUA =  ArghanDivUpAttack;
+sprMoveUA =  EnemyUpAttackArghanDiv;
 
 
 
@@ -25,8 +25,8 @@ sprHurt = Ice_Crown_Hurt;
 
 invulnerable = 0; 
 enemyScript[EnemySTATE.WANDER]= GoblinWander145;
-enemyScript[EnemySTATE.CHASE]= GoblinChaseDiv;
-enemyScript[EnemySTATE.ATTACK]= GoblinAttackMultiSprite;
+enemyScript[EnemySTATE.CHASE]= GoblinChaseDruagr;
+enemyScript[EnemySTATE.ATTACK]= GoblinAttackMultiSpriteSMinion;
 enemyScript[EnemySTATE.HURT] = GoblinHurt;
 enemyScript[EnemySTATE.DIE] =GoblinDie;
 

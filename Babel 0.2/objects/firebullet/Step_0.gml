@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editormudballlevel=global.Pressure
 image_angle = point_direction(x,y,targetX,targetY)
-_damage=1+damage;
+
 
 depth=-200
 

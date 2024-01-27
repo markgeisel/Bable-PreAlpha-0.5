@@ -3,10 +3,17 @@
 function HurtPlayer(_direction,_force,_damage){
      if (OGoblin.invulnerable <= 0)
 	{
+		var attack=0
+		if global.Kabbalah =1{
+		var roll 
+		roll=random_range(0,100)
+		if roll >=95{attack=1}
+}
+if attack=0{
 
-if global.Thorns = 1 {enemyHP--}
-
-	global.playerhealth = max (0, global.playerhealth-_damage);
+if global.Thorns = 1 {enemyHP-=_damage}
+if global.BootsOfVioarr = 1 {enemyHP-=_damage}
+	global.playerhealth = max (0, global.playerhealth-_damage*OGoblin.DamageReduction);
 		if (global.playerhealth >0)
 		{
 		
@@ -29,5 +36,7 @@ if global.Thorns = 1 {enemyHP--}
 		 with(OGoblin) state =Playerstate_dead
 	 
 	 }
+	 }else{
+end
 	 }
 }

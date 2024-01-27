@@ -1,4 +1,7 @@
 event_inherited();
+tick=0
+knockable=1 
+enemyHP=enemyHP*2
 resetcounter=0
 cull = false 
 Cullcounter=0
@@ -49,3 +52,6 @@ Skin=irandom_range(0,2)
 target=Player
 count=0
 grav=0
+boss=0
+small=0
+medium=0

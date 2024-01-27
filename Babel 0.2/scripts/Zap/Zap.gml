@@ -24,16 +24,16 @@ OGoblin.direction = point_direction(x,y,crosshairX,crosshairY);
 	
 	
 
-		 with (instance_create_layer(OGoblin.x,OGoblin.y-8,"Instances",LightingBall))
+		 with (instance_create_layer(OGoblin.crosshairX,OGoblin.crosshairY-250,"Instances",LightingBall))
 	{
 
 		targetX = OGoblin.crosshairX;
 		targetY = OGoblin.crosshairY;
-		direction = point_direction(x,y,targetX,targetY);
+		direction =270
 	distanceTotal = point_distance(x,y,targetX,targetY);
 		distanceRemaining = distanceTotal;
-		peakHeight = min(max(0,distanceTotal - 32)*0.9,25);
-			spd = 1.7}
+		peakHeight = min(max(0,distanceTotal - 0)*0,0);
+			spd =8}
 			
 
 		state= Playerstate_free

@@ -5,6 +5,8 @@ target=other.id}
 	
 }
 
+
+
 keyLeft = keyboard_check(vk_left) || keyboard_check(ord("A"));
 keyRight = keyboard_check(vk_right)|| keyboard_check(ord("D"));
 keyUp = keyboard_check(vk_up)|| keyboard_check(ord("W"));
@@ -15,9 +17,21 @@ keyAttackright=mouse_check_button_pressed(mb_right);
 keyAttack2 =  keyboard_check_pressed(vk_lcontrol)|| keyboard_check_pressed(vk_rcontrol) ;
 keyDodge = keyboard_check_pressed(vk_space);
 keyChange = keyboard_check_pressed(vk_tab);
-if poison >0 {speedWalk=0.5;
+if poison >0 {
+	if changespeed=0{
+		speedWalkOriginal=speedWalk
+		speedWalk=speedWalk*0.8
+		changespeed=1}	;
+
 global.poison= 1
+}else{if changespeed=1{
+	speedWalk=speedWalkOriginal
+		changespeed=0
 }
+	}
+
+
+
 
 
 frame += 6 / game_get_speed(gamespeed_fps);
@@ -35,14 +49,18 @@ inputMagnitude = (keyRight-keyLeft !=0) || (keyDown -keyUp !=0);
 
 
 if
-(!global.gamePaused){ script_execute(state);
+(!global.gamePaused){ 
+	
+	
+	
+	script_execute(state);
 	invulnerable = max(invulnerable-1,0)
 
 IceSpikedelay= max(IceSpikedelay-1/room_speed,0)
  
 	poison = max(poison-0.05,0);
 	flash = max(flash-0.05,0);
-	Mana = min(Mana+(8/60),100)
+	Mana = min(Mana+(ManaIncreaseRate*ManaMultiplier/60),manamax)
 	if (delay > 0){ delay -= 1 } else if(global.snowtrail=1){ instance_create_layer(x-7, y-9,"Instances",Object78) delay = 3* room_speed }
 	
 	}

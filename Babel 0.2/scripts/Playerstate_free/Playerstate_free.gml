@@ -3,24 +3,21 @@ function Playerstate_free() {
 		   mask_index=sprite_index
 charge=0;
 
-		if (keyAttack2)&&(Mana>60)&&global.iceeye=1{instance_create_layer(x-32,-32,"instances",IceEye)
-			Mana=Mana-60
-			
-			}
+	
 		
 		if (keyDodge)
 		{ 
 		
-			       var _activateX  =x+ lengthdir_x(32,direction);
-				var _activateY  =y+ lengthdir_y(32,direction);
-				var _activateSize=-1;
+			       var _activateX  =x lengthdir_x(20,direction);
+				var _activateY  =y lengthdir_y(20,direction);
+				var _activateSize=15;
 				var _activateList = ds_list_create();
 				activate=noone;
 				var _entitiesFound = collision_rectangle_list(
 				_activateX - _activateSize,
 				_activateY - _activateSize,
-				_activateX - _activateSize,
-				_activateY - _activateSize,
+				_activateX + _activateSize,
+				_activateY + _activateSize,
 				P_entity,
 				false,
 				true,
@@ -46,25 +43,17 @@ charge=0;
 				else
 			
 			
-	if Mana>2.5			{
+
 				state = Playerstate_dodge; 
-				Mana=Mana-2.5
+			
 				moveDistanceRemaining = distance
-				}
+	
 			}
 						else{
 				
 							ScriptExecuteArray(activate.entityActivateScript, activate.entityActivateArgs);
 	
-	
-						 	if (activate.entityNPC)
-								{
-											with (activate)
-										   	{direction = point_direction(x,y,other.x,other.y)
-											   		image_index = CARDINAL_DIR
-													
-			    }
-		    }
+
 		  }
 		}
 	
@@ -116,6 +105,18 @@ state=Playerstate_attk;
 	Mana=Mana-5;
 IceSpikedelay=5;
 }
+
+if keyAttackright&&form = 1&& Mana>5	{
+
+state=Playerstate_attk;
+		stateattk=FireSlash;
+	Mana=Mana-5;
+IceSpikedelay=5;
+}
+
+
+
+
 if keyAttackright&&form = 0&& Mana>20&&IceSpikedelay=0&&global.icespike==1	{
 
 state=Playerstate_attk;
@@ -134,20 +135,23 @@ state=Playerstate_attk;
 
 
 
-	if (keyAttack)&&form = 0&& Mana>3	
+	if (keyAttack)&&form = 0&& Mana>=1	
 	
 	{ state=Playerstate_attk;
 		stateattk=Playerstate_charge;
-	Mana=Mana-3;
+	Mana=Mana-1;
+	Mana=	floor(Mana)
 
 	
 		}
 
 		
-	if (keyAttack)&&form = 1
+	if (keyAttack)&&form = 1&& Mana>=1	
 	{state=Playerstate_attk;
 		stateattk=Playerstate_charge; 
-			Mana=Mana-3;
+			Mana=Mana-1;
+		Mana=	floor(Mana)
+
 	}	
 	
 		else 
@@ -155,6 +159,8 @@ state=Playerstate_attk;
 	{state=Playerstate_attk;
 		stateattk=Stomp1;
 		Mana--
+	Mana=	floor(Mana)
+
 	}	
 	
 	
@@ -164,6 +170,9 @@ state=Playerstate_attk;
 	{ state=Playerstate_attk;
 		stateattk=Zap;
 		Mana--
+	Mana=	floor(Mana)
+
+		
 	}
 
 

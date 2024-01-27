@@ -4,7 +4,7 @@
 
 event_inherited();
 aggro = 0; 
-state = EnemySTATE.WANDER;
+state = EnemySTATE.CHASE;
 _Lighting=0;
 sprMove = shudinLeft;
 shoot = 0 

@@ -5,8 +5,8 @@
 event_inherited();
 
 if Healthbar == 1 {
-draw_sprite_stretched(EnemyHealthBack,image_index ,x-25,y-42,(1)*50,5);
-draw_sprite_stretched(EnemyHealth,image_index ,x-25,y-42,(enemyHP/EnemyhpOrginal)*50,5);
+draw_sprite_stretched(EnemyHealthBack,image_index ,x-20,bbox_top-15,(1)*40,3);
+draw_sprite_stretched(EnemyHealth,image_index ,x-20,bbox_top-15,(enemyHP/EnemyhpOrginal)*40,3);
 }
 if hit>0{
 draw_text(x+climbX,y-0-climb,damagetaken)

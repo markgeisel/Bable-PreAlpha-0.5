@@ -1,8 +1,9 @@
+if !place_meeting(x, y, Pillar) {
 if place_meeting(x, y, P_Enemy) {
 var collisionMap = layer_tilemap_get_id(layer_get_id("cull"));
 var tileSize = 1; // the size of each tile in pixels
 var checkSize = 5; // the number of tiles to check in each direction
-var push = 0.5; // the push distance
+var push = 0.3; // the push distance
 
 collisionMap = layer_tilemap_get_id(layer_get_id("cull"));
 
@@ -25,7 +26,7 @@ if (entityCull) {
 
     // Check for collisions with other enemies
     if (!collided) {
-        var separationRadius = 16; // Adjust this value to control the separation distance
+        var separationRadius = 12; // Adjust this value to control the separation distance
         var avoidVectorX = 0;
         var avoidVectorY = 0;
 
@@ -52,4 +53,4 @@ if (entityCull) {
         y = yPrev;
     }
 }
-}
+}}

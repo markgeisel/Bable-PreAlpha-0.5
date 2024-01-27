@@ -5,12 +5,12 @@
 event_inherited();
 Spawn=0 
 aggro = 0; 
-state = EnemySTATE.CHASE;
+state = EnemySTATE.SPAWN;
 _Lighting=0;
 sprMove = snowthrowerattack1;
 sprAttack = snowthrower1;
-sprDie = Ice_Crown_Die;
-sprHurt = Ice_Crown_Hurt;
+sprDie = snowthrowerDeath;
+ sprHurt = snowthrower1;
 invulnerable = 0; 
 enemyScript[EnemySTATE.WANDER]= GoblinWander;
 enemyScript[EnemySTATE.CHASE]= GoblinChase231;
@@ -26,7 +26,6 @@ move_speed = 1.2;   // Speed of the enemy's movement
 swarm_distance = 60;   // Distance from the player at which the enemy starts to swarm
  swarm_speed = 2;   // Speed at which the enemy swarms around the player
  swarm_radius = 90;   // Radius of the swarm circle
- attack_range = 62
-
- ;   // Range of the enemy's attack
+ attack_range = 62;   // Range of the enemy's attack
  attack_speed = 50;
+ small=1

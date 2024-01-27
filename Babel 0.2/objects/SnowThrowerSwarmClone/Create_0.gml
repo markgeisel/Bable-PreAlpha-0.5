@@ -9,9 +9,13 @@ state = EnemySTATE.CHASE;
 _Lighting=0;
 sprMove = snowthrowerattack1;
 sprAttack = snowthrower1;
-sprDie = Ice_Crown_Die;
-sprHurt = Ice_Crown_Hurt;
+sprDie = snowthrowerDeath;
+sprHurt = snowthrower1;
 invulnerable = 0; 
+
+
+
+
 enemyScript[EnemySTATE.WANDER]= GoblinWander;
 enemyScript[EnemySTATE.CHASE]= GoblinChase231;
 enemyScript[EnemySTATE.ATTACK]= GoblinAttackrange1;

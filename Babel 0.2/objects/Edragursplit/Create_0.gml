@@ -14,13 +14,28 @@ sprMoveRA =SplitAttackRight ;
 sprMoveLA= SplitAttackLeft;
 sprMoveDA =  SplitAttackDown;
 sprMoveUA =  SplitAttackUp;
+xreturn=0
+yreturn=0
+ 
+sprMoveD2 =  dreiliftSeveredShoot;
+Healthbar=0
 
-
-
-
+enemyhpstart=enemyHP
+create=0
+trigger=0
+trigger1=0
+small=0
+spiritattackcount=0
+trigger2=0
+boss=0 
+attackcd=60
 
 small=0
-
+EntityDropList=choose(
+[Health_pickup],
+[Health_pickup,O_Coin],
+[Health_pickup,O_Coin,O_Coin]
+)
 
 sprDie = dreiliftdie;
 sprHurt = Dreilifthurt;
@@ -28,10 +43,10 @@ sprHurt = Dreilifthurt;
 
 invulnerable = 0; 
 enemyScript[EnemySTATE.WANDER]= GoblinWander145;
-enemyScript[EnemySTATE.CHASE]= GoblinChaseDiv;
-enemyScript[EnemySTATE.ATTACK]= GoblinAttackDiv;
+enemyScript[EnemySTATE.CHASE]= GoblinChaseDruagrSplit;
+enemyScript[EnemySTATE.ATTACK]= GoblinAttackDraugrSplit;
+enemyScript[EnemySTATE.ATTACK2]= GoblinAttackDraugrSpirit;
 enemyScript[EnemySTATE.HURT] = GoblinHurt;
 enemyScript[EnemySTATE.DIE] =GoblinDie;
 
 invulnerable = max(invulnerable-1,0)
-can_collide = true

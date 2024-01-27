@@ -8,15 +8,34 @@ _playerhealth -= _playerhealthFrac;
 var playerexp=global.playerexp
 
 if (!global.gamePaused){
- draw_sprite_stretched(EnemyHealthBack,1 ,manabar_x-60,manabar_y-182,(1)*manabar_width/3,5);
-draw_sprite_stretched(playerhealthbar,frame ,manabar_x-60,manabar_y-182,(global.playerhealth/global.Maxplayerhealth)*manabar_width/3,5);
- draw_sprite_stretched(EnemyHealthBack,1 ,manabar_x-60,manabar_y-175,(1)*manabar_width/2,5);
-
-draw_sprite_stretched(ManaBar,frame ,manabar_x-60,manabar_y-175,(Mana/manamax)*manabar_width/2,5);
+ draw_sprite_stretched(EnemyHealthBack,1 ,manabar_x-60,manabar_y-180,(1)*manabar_width/3,3);
+draw_sprite_stretched(playerhealthbar,frame ,manabar_x-60,manabar_y-180,(global.playerhealth/global.Maxplayerhealth)*manabar_width/3,3);
 
 
 
+if Mana >= 1 draw_sprite(Manafull, 0, manabar_x-55, manabar_y-175) else draw_sprite(ManaEmpty, 0, manabar_x-55, manabar_y-175);
+if OGoblin.manamax>=2{ 
+if Mana >= 2 draw_sprite(Manafull, 0, manabar_x-45, manabar_y-175) else draw_sprite(ManaEmpty, 0, manabar_x-45, manabar_y-175);
+}
+if OGoblin.manamax>=3 {
+if Mana >= 3 draw_sprite(Manafull, 0, manabar_x-35, manabar_y-175) else draw_sprite(ManaEmpty, 0, manabar_x-35, manabar_y-175);
+}
+if OGoblin.manamax>=4 {
+if Mana >= 4 draw_sprite(Manafull, 0, manabar_x-25, manabar_y-175) else draw_sprite(ManaEmpty, 0, manabar_x-25, manabar_y-175);
+}
+if OGoblin.manamax>=5 {
+if Mana >= 5 draw_sprite(Manafull, 0, manabar_x-15, manabar_y-175) else draw_sprite(ManaEmpty, 0, manabar_x-15, manabar_y-175);
+}
+if OGoblin.manamax>=6 {
+if Mana >= 6 draw_sprite(Manafull, 0, manabar_x-5, manabar_y-175) else draw_sprite(ManaEmpty, 0, manabar_x-5, manabar_y-175);
+}
+if OGoblin.manamax>=7 {
+if Mana >= 7 draw_sprite(Manafull, 0, manabar_x+5, manabar_y-175) else draw_sprite(ManaEmpty, 0, manabar_x+5, manabar_y-175);
+}
 
+
+draw_text(UI_MARGIN +45,UI_MARGIN +85,Mana)
+draw_text(UI_MARGIN +45,UI_MARGIN +95,manamax)
 draw_sprite(potion, frame,UI_MARGIN +15 ,UI_MARGIN+85)
 	
 
@@ -115,3 +134,20 @@ if global.SPlayerKey == 1 {
 
 
 }
+
+if form = 0 
+ {
+	//draw_sprite (sprite103,0,0,100);
+ }
+if form = 1 
+ {
+//	draw_sprite (sprite103,1,0,100);
+ }
+if form = 2 
+ {
+	//draw_sprite (sprite103,2,0,100);
+ }
+if form = 3 
+ {
+//	draw_sprite (sprite103,3,0,100);
+ }

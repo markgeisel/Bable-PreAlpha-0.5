@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+ 
 // Inherit the parent event
 event_inherited();
 aggro = 0; 
-state = EnemySTATE.WANDER;
+state = EnemySTATE.SPAWN;
 _Lighting=0;
 sprMoveR = SquidWalkRight;
 sprMoveL= SquidWalkLeft;
@@ -15,10 +15,10 @@ sprattackL=SquidAttackLeft
 sprattackD=SquidAttackDown
 sprattackU=SquidAttackUp
 
-
+small =1
 
 sprAttack = SquidAttackDown;
-sprDie = Ice_Crown_Die;
+sprDie = SquidDeath;
 sprHurt = Ice_Crown_Hurt;
 
 
@@ -29,5 +29,7 @@ enemyScript[EnemySTATE.CHASE]= GoblinChaserange2;
 enemyScript[EnemySTATE.ATTACK]= GoblinAttackSquid1;
 enemyScript[EnemySTATE.HURT] = GoblinHurt;
 enemyScript[EnemySTATE.DIE] =GoblinDie;
+enemyScript[EnemySTATE.WAIT] =enemyWait;
+
 invulnerable = max(invulnerable-1,0)
 can_collide = true

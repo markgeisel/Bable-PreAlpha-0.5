@@ -3,14 +3,14 @@
 	function GoblinChaseDiv() {
 
 	if (instance_exists(target))
-
+create= 0 
 localFrame =image_index
 {
 	
 
 	
 	xTo = target.x; 
-	yTo= target.y+8;
+	yTo= target.y
 
 	var _DistanceToGo = point_distance(x,y,xTo,yTo);
 	image_speed =1.0;
@@ -36,8 +36,8 @@ localFrame =image_index
 	
 
 	state= EnemySTATE.ATTACK;
-	xTo += lengthdir_x(60,dir);
-	yTo += lengthdir_y(60,dir);
+	xTo += lengthdir_x(30,dir);
+	yTo += lengthdir_y(38,dir);
 	
 	image_index=0;
 	image_speed=1.0;

@@ -4,7 +4,7 @@ if room == rmDungeon4{
 
 
 if instance_exists(oDungeon3) {
-if oDungeon3.count =2 &&oDungeon.roomList[| (ds_list_size(oDungeon3.roomList) -8)]&&oDungeon3.roomList[|8].c=3{
+if oDungeon3.count =2{
 
 x=((oDungeon3.roomList[| 7].x1+oDungeon3.roomList[| 7].x2+1)/2)*32
 y= ((oDungeon3.roomList[| 7].y1+oDungeon3.roomList[| 7].y2+1)/2)*32
@@ -38,10 +38,7 @@ break;
 spawn = 1 
 	}
 
-if(instance_exists(target))&&(point_distance(x,y,target.x,target.y)>= 130)
-{
-RangeTime = 0 
-}
+
 
 
 
@@ -152,7 +149,7 @@ if room == rmDungeon2{
 
 
 if instance_exists(oDungeon) {
-if oDungeon.count =2 &&oDungeon.roomList[| (ds_list_size(oDungeon.roomList) -8)]&&oDungeon.roomList[|8].c=3{
+if oDungeon.count =2 {
 
 x=((oDungeon.roomList[| 7].x1+oDungeon.roomList[| 7].x2+1)/2)*32
 y= ((oDungeon.roomList[| 7].y1+oDungeon.roomList[| 7].y2+1)/2)*32
@@ -221,45 +218,44 @@ instance_destroy()
 
 
 
-if room == rmDungeon{
+if room == rmDungeon||room == rmDungeon_1{
 
 
 if instance_exists(oDungeon) {
-if oDungeon.count =2 &&oDungeon.roomList[| (ds_list_size(oDungeon.roomList) -8)]&&oDungeon.roomList[|8].c=3{
+if oDungeon.count =2 {
 
 x=((oDungeon.roomList[| 7].x1+oDungeon.roomList[| 7].x2+1)/2)*32
 y= ((oDungeon.roomList[| 7].y1+oDungeon.roomList[| 7].y2+1)/2)*32
 
 
-}}
-	value =  global.IceDungeonValueUse
+}
+
+}
+	value =  global.IceDungeonMiniBossValueUse
 
 if spawn = 0 
 {
-if(instance_exists(target))&&(point_distance(x,y,target.x,target.y)<= 130)
+if touch = 1 
 {
-
-RangeTime++
-	if RangeTime >= 15
-	{
+spawn = 1 
 
 switch(global.IceDungeonMiniBossValueUse)
 {
 case 1:
 instance_create_layer(x,y,"Instances",E8)
-instance_create_layer(x-10,y,"Instances",E5)
-instance_create_layer(x+10,y,"Instances",E5)
+
 
 break;
 case 2:
 
-instance_create_layer(x+10,y,"Instances",E1)
 instance_create_layer(x,y,"Instances",E9)
 
 break;
 case 3:
-instance_create_layer(x+10,y-16,"Instances",E10)
-
+with instance_create_layer(x,y,"Instances",E10)
+{xreturn=other.x
+ yreturn=other.y	
+	}
 
 break;
 
@@ -267,13 +263,24 @@ break;
 
 
 
-spawn = 1 
-	}
 
-if(instance_exists(target))&&(point_distance(x,y,target.x,target.y)>= 130)
-{
-RangeTime = 0 
+	
+	
+	
+	
+if spawn = 1 {
+	if touch = 1 {
+
+with instance_create_layer(x,y,"Barrier",ObjSpikes){
+ target=id
+boss=1
 }
+spawn=2
+
+}}
+
+
+
 
 
 

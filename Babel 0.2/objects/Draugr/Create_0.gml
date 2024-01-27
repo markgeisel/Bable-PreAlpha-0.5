@@ -13,7 +13,7 @@ _Lighting=0;
 sprAttack = dreiliftbigAttack;
 sprDie = dreiliftbigseparate;
 sprHurt = dreiliftbigwalk;
-sprMoveR = dreiliftbigwalkRight1;
+sprMoveR = dreiliftbigwalkRight;
 sprMoveL= dreiliftbigwalkLeft;
 sprMoveD = dreiliftbigwalkDown;
 sprMoveU = dreiliftbigwalkUp;
@@ -26,11 +26,14 @@ sprMoveUA =  DruagarUpAttack;
 
 
 
+boss=0 
+Healthbar=0
 
 
 invulnerable = 0; 
 
-enemyScript[EnemySTATE.CHASE]= GoblinChaseDiv;
+enemyScript[EnemySTATE.CHASE]= GoblinChaseDruagr;
+enemyScript[EnemySTATE.ATTACK]= GoblinAttackDiv;
 enemyScript[EnemySTATE.ATTACK]= GoblinAttackDiv;
 enemyScript[EnemySTATE.HURT] = GoblinHurt;
 enemyScript[EnemySTATE.DIE] =GoblinDiesplit;

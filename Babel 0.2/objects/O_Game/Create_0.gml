@@ -1,6 +1,9 @@
   gameend=0
 randomize();
-
+//show_debug_overlay(true)
+shadowSurface = surface_create(384, 216);
+skewX = 15;
+shadowHeight = 20;	
 
 
 function pseudo_game_restart() {
@@ -32,7 +35,7 @@ gc_enable(true);
 //particle creation 
 #region 
 //fireball exlpode
-global.ps = part_system_create();
+global.ps = part_system_create(); 
 part_system_depth(global.ps, -150);
 
 
@@ -121,29 +124,14 @@ global.ptBasic = _p
 
 #endregion
 //smoke
-#region
-var _p1= part_type_create();
 
-
-part_type_shape(_p1,pt_shape_smoke)
-part_type_life(_p1,40,100);
-part_type_alpha3(_p1,0 ,0.15,0)
-part_type_size(_p1,0.01,0.05,0.001,0.001)
-part_type_speed(_p1, 0.025,0.05,0.005,0.005)
-part_type_color_mix(_p1,c_ltgray,c_white)
-
-part_type_direction(_p1,80,100,0.1,0.1)
-
-global.ptBasic1 = _p1
-
-#endregion
 //firetrail
 #region
 var _p2= part_type_create();
 
 
 part_type_shape(_p2,pt_shape_smoke)
-part_type_life(_p2,20,60);
+part_type_life(_p2,20,40);
 part_type_alpha3(_p2,0 ,0.3,0)
 part_type_size(_p2,0.01,0.05,0.001,0.001)
 part_type_speed(_p2, 0.025,0.05,0.005,0.005)
@@ -480,6 +468,27 @@ global.pe_ItemEffect = part_emitter_create(global.partSystem1);
 
 #endregion
 
+global.IceDungeonpuzzle=ds_list_create()
+{
+ds_list_add(global.IceDungeonpuzzle, 1);
+ds_list_add(global.IceDungeonpuzzle, 2);
+ds_list_add(global.IceDungeonpuzzle, 3);
+ds_list_add(global.IceDungeonpuzzle, 4);
+ds_list_add(global.IceDungeonpuzzle, 5);
+ds_list_add(global.IceDungeonpuzzle, 6);
+ds_list_add(global.IceDungeonpuzzle, 7);
+ds_list_add(global.IceDungeonpuzzle, 8);
+ds_list_add(global.IceDungeonpuzzle, 9);
+ds_list_add(global.IceDungeonpuzzle, 10);
+ds_list_add(global.IceDungeonpuzzle, 11);
+ds_list_add(global.IceDungeonpuzzle, 12);
+}
+ global.IceDungeonPuzzleValue = irandom(ds_list_size(global.IceDungeonpuzzle) - 1);
+ global.IceDungeonPuzzleValueUse = ds_list_find_value(global.IceDungeonpuzzle, global.IceDungeonPuzzleValue);
+ 
+
+
+
 global.IceDungeonFodder=ds_list_create()
 
 
@@ -497,8 +506,13 @@ ds_list_add(global.IceDungeonFodder, 10);
 ds_list_add(global.IceDungeonFodder, 11);
 ds_list_add(global.IceDungeonFodder, 12);
 ds_list_add(global.IceDungeonFodder, 13);
-
-
+ds_list_add(global.IceDungeonFodder, 14);
+ds_list_add(global.IceDungeonFodder, 15);
+ds_list_add(global.IceDungeonFodder, 16);
+ds_list_add(global.IceDungeonFodder, 17);
+ds_list_add(global.IceDungeonFodder, 18);
+ds_list_add(global.IceDungeonFodder, 19);
+ds_list_add(global.IceDungeonFodder, 20);
  global.IceDungeonValue = irandom(ds_list_size(global.IceDungeonFodder) - 1);
  global.IceDungeonValueUse = ds_list_find_value(global.IceDungeonFodder, global.IceDungeonValue);
  
@@ -610,21 +624,18 @@ global.Lightningdmgprecent =1 ;
 global.Firedmgprecent =1;
 global.Icedmgprecent =1 ;
 global.Earthdmgprecent =1 ;
-global.criticalhit =+ 0.1 
-global.Firedmgprecent=+0.15 
+global.criticalhit = 0.05 
+
 global.Healingpower =1 
 
-global.Icedmgprecent =1
-global.Firedmgprecent =1
- global.Icedmgprecent =1
-global.Earthdmgprecent =1
+
 global.poison=0;
 global.fireball=0
 global.icespike=0
 global.Pressure=0;
 global.iceeye=0;
-global.playermana=100
-global.playermanamax=100
+global.playermana=4
+global.playermanamax=4
 global.roomchange=0;
 global.keyused=0
 global.playerexist=0
@@ -660,6 +671,11 @@ global.Reichskrone=0
 global.DeadSeaScroll=0
 global.FigureOfVenus=0
 global.Kabbalah=0
+global.jagnglofar=0
+global.Gram=0
+global.Helskor =0
+global.Rati=0
+global.Lavateinn=0
 global.Menorah=0
 global.ScrollOfJohn=0
 global.SwordOfAli=0
@@ -678,19 +694,34 @@ global.Gungnir=0
 global.Mjolnir=0
 global.Megingjord=0
 global.Hymers=0
+global.Gram=0
+global.ForsetiAxe=0
+global.Tryfing=0
+global.DwellersRing=0
+global.Lavateinn=0
+global.BowofUllr=0
+global.AumletOfEri=0
+global.HeartOfYmir=0
+global.BootsOfVioarr=0
+global.GunnarsAtgeir=0
+global.SurtrsHeart=0
+global.Surtalogi=0
+global.SurtrsSword=0
+global.BloodOfYmir=0
+global.FleshOfYmir=0
+global.Sandles=0
 global.inventory=array_create(Inventory_Slots,-1);
 global.equip=array_create(Equip_Slots,-1);
-   show_debug_overlay(true);
 
 window_set_cursor(cr_none);
-window_set_fullscreen(true);
-
-
-fullscreen = false;
 
 
 
-show_debug_message(surface_get_target());
+fullscreen = true;
+
+
+
+
 
 room_goto(ROOM_Start);
 

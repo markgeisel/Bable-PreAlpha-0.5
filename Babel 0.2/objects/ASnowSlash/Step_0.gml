@@ -5,8 +5,6 @@
 
 
 
-
-_damage=1+damage+(global.icespike/8);
 xprevious = x;
 	yprevious = y;
 	zprevious = z;
@@ -75,6 +73,6 @@ part_emitter_burst(global.ps, global.pe_playersnowball, global.pt_playersnowball
 
 	}
 
-count =1 	
+
 	//if (image_alpha <= 0) instance_destroy();
 	

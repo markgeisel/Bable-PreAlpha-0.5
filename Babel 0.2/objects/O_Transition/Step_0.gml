@@ -16,7 +16,7 @@ if (leading == IN )
 else 
  
 
-{
+{ 
 if (percent<= 0.5){
 OGoblin.x=global.targetx OGoblin.y=global.targety
 }

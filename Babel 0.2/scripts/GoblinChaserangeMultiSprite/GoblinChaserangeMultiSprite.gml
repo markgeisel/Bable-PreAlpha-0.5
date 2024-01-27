@@ -31,7 +31,7 @@ function GoblinChaserangeMultiSprite() {
 	if (instance_exists(target))&&(point_distance(x,y,target.x,target.y)<= enemyAttackRadius)
 	{
 	state= EnemySTATE.ATTACK;
-	sprite_index=sprAttack;
+
 	image_index=0;
 	image_speed=1.0;
 	

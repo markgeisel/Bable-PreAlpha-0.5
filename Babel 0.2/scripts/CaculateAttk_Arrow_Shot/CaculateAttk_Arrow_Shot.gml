@@ -33,10 +33,6 @@ function CaculateAttk_Arrow_Shot(argument0) {
 	ds_list_destroy(hitbyattknow)
 if global.player = 1 {	mask_index = OGoblin;
 }
-if global.player = 2 {	mask_index = Archer;
-}
-if global.player = 3 {	mask_index = Warrior;
-}
 
 
 

@@ -3,8 +3,22 @@
 
 
 
-if (!surface_exists(surfminimapbg)) refreshmap();
+if (!surface_exists(surfminimapbg)) {refreshmap();}
 draw_surface(surfminimapbg,x+324,y+1)
+draw_surface(surffow,x+324,y+1)
+
+
+
+
+
+
+
+
+
+
+
+
+
 draw_sprite_stretched(Minimapborder487,0,x+322,y-1,w+3,h+4)
 
 if (!surface_exists(surfminimapEntities)) surfminimapEntities = surface_create(w,h);
@@ -37,5 +51,7 @@ draw_sprite_stretched(
 
 Minimapborder,-1,_vx+324,_vy+1,384/tile_size,192/tile_size	
 );
+
+
 
 

@@ -20,7 +20,7 @@ if (instance_exists(OGoblin)) && (position_meeting(OGoblin.x,OGoblin.y,id))
  global.targetDirection = OGoblin.direction-180;
   
 
-RoomTransition(Trans_type.SLIDE,targetRoom)
+RoomTransition(Trans_type.FADE,targetRoom)
 
 
 }

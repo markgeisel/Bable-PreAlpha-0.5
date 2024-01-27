@@ -19,7 +19,7 @@ function PlayerCull() {
     while (_entityCount > 0) {
         var _entityCheck = _entityList[|0];
 
-        if (_entityCheck.entityCull == true && _entityCheck.object_index != P_Enemy) {
+        if (_entityCheck.entityCull == true&&object_get_parent(_entityCheck.object_index ) <> P_Enemy) {
             hSpeed = 0;
             _collision = true;
             _entityCount = 0;
@@ -49,7 +49,7 @@ function PlayerCull() {
     while (_entityCount > 0) {
         var _entityCheck = _entityList[|0];
 
-        if (_entityCheck.entityCull == true && _entityCheck.object_index != P_Enemy) {
+       if (_entityCheck.entityCull == true&&object_get_parent(_entityCheck.object_index ) <> P_Enemy) {
             vSpeed = 0;
             _collision = true;
             _entityCount = 0;

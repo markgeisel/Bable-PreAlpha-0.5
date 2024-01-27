@@ -7,17 +7,18 @@ if (!instance_exists(PortalLight2)){
 }
 ;if (instance_exists(OGoblin)) && (position_meeting(OGoblin.x,OGoblin.y,id))
 {
- 
+ counter++ 
 
  global.targetx = targetx;
  global.targety = targety;
  global.targetDirection = OGoblin.direction-180;
-  
-OGoblin.x=0;
-OGoblin.y=0;
+
+if counter = 20 
+{
 OGoblin.x=targetx;
 OGoblin.y=targety;
-RoomTransition(Trans_type.SLIDE,targetRoom)
+}
+RoomTransition(Trans_type.FADE,targetRoom)
 
 
 }

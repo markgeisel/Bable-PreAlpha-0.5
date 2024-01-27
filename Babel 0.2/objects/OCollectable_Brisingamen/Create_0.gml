@@ -11,3 +11,4 @@ spd=0
 float = 1 
 counter=0
 damage="Bringsmen"
+value=65

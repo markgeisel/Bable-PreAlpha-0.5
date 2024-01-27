@@ -1,6 +1,7 @@
 function GoblinAttackSuicide() { 
 	var _spd = Enemyspeed*3;
-	
+ invulnerable=10 
+ Healthbar=0
 	if (image_index<2) _spd=0;
 	if (floor(image_index)== 3) || (floor(image_index)== 6) image_speed = 0;
 

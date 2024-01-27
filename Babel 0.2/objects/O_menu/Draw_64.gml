@@ -5,4 +5,4 @@ if forward==1
 	draw_sprite(sprite78,-1,35,100)
 draw_sprite(sprite781,-1,30,150)
 draw_sprite(sprite7811,-1,30,200)
-display_set_gui_size(384, 192);}
+display_set_gui_size(384, 216);}

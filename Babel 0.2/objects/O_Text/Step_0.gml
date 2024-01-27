@@ -32,12 +32,7 @@ if(keyboard_check_pressed(vk_enter))
 	}
 	else{if global.player=1{
 		with (OGoblin) state= lastState;
-	} if global.player=2{
-		with (Archer) stateA= lastStateA;
-	}
-	
-		if global.player=3{
-		with (Warrior) stateW= lastStateW;
+
 	
 	}
 	}

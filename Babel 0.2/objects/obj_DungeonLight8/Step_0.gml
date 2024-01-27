@@ -1,6 +1,6 @@
 
 if instance_exists(oDungeon) {
-if oDungeon.count =2 && oDungeon.roomList[| (ds_list_size(oDungeon.roomList) -8)]{
+if oDungeon.count =2 {
 
 
 

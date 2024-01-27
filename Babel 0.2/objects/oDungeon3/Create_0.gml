@@ -21,6 +21,7 @@ roomWidthMax = 10;
 Finished= 0
 roomHeightMin = 10;
 roomHeightMax = 10;
+	maxroom=9
 	
 depth=-1000
 // Random floor tile z`

@@ -33,7 +33,7 @@ OGoblin.direction = point_direction(x,y,crosshairX,crosshairY);
 	distanceTotal = point_distance(x,y,targetX,targetY);
 		distanceRemaining = distanceTotal;
 
-			spd =3.5;
+			spd =3;
 				damage=0
 				xscale=1
 				yscale=1

@@ -28,7 +28,7 @@ var tar_y = OGoblin.y+lengthdir_y(distanceTotal/2*(OGoblin.speedWalk*round(magay
 		distanceRemaining = distanceTotal;
 		peakHeight = min(max(0,distanceTotal - 32)*0.9,25);
 
-			spd =1.8;}
+			spd =1.5;}
 					 count =1
 	}
 	
@@ -36,7 +36,7 @@ var tar_y = OGoblin.y+lengthdir_y(distanceTotal/2*(OGoblin.speedWalk*round(magay
 		stateTarget= EnemySTATE.CHASE;
 
 		count=0 
-		sateWaitDuration = 30;
+		sateWaitDuration = 60;
 		state = EnemySTATE.WAIT;
 	}
 

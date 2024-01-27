@@ -1,4 +1,4 @@
-event_inherited()
+
 
 visible=false;
 if !instance_exists(P_Enemy){

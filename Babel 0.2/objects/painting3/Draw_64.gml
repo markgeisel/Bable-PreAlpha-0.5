@@ -9,7 +9,7 @@ if global.page == 4 && GUI_Menu.changepage = 0 {
 
 display_set_gui_size(1920,1080 );
 
-display_set_gui_size(384, 192);
+display_set_gui_size(384, 216);
 
 }
 

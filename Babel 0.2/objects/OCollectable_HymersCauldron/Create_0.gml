@@ -10,3 +10,4 @@ flash=1
 spd=0
 float = 1 
 counter=0
+value=50

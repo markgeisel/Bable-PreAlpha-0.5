@@ -55,11 +55,14 @@ if (enemyHP <=0)
 state =EnemySTATE.DIE
 }
 else
-{
+{ 
+	if knockable = 1 {
 		var _KnockDirection = point_direction(x,y,(_Source).x,(_Source).y);
 		xTo =x - lengthdir_x(_knockback,_KnockDirection);
 		yTo =y - lengthdir_y(_knockback,_KnockDirection);
 	
+	
+	}
 	if(state != EnemySTATE.HURT)&&(state != EnemySTATE.ATTACK)statePrevious=state;
 	state= EnemySTATE.HURT;
 
@@ -70,7 +73,10 @@ yTo = y;
 
 
 }
-}image_index=0;
+}
+
+if knockable=1{ 
+image_index=0;}
 if(_knockback!=0)&&(state != EnemySTATE.ATTACK)&&(state != EnemySTATE.HURT)
 {
 	

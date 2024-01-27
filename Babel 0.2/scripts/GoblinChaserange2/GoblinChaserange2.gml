@@ -27,6 +27,8 @@ function GoblinChaserange2() {
 	}
 
 
+
+
   
 	if (instance_exists(target))&&(point_distance(x,y,target.x,target.y)<= enemyAttackRadius)
 	{

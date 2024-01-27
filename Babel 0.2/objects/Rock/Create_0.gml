@@ -6,7 +6,7 @@
 // Inherit the parent event
 event_inherited();
 light=1
-
+small=1
 enemyScript[EnemySTATE.DIE]=  GoblinDie
 sprDie =SrockDeath
 EntityDropList=choose(

@@ -3,12 +3,6 @@
 
 
 
-
-if (variable_Shadow) draw_sprite(Shadow,0,x,y);
-
-
-if (variable_Shadowsmall) draw_sprite(Shadowsmall,0,x,y);
-
 if flash != 0 {
 	
 	

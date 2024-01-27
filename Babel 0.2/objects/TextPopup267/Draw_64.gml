@@ -6,6 +6,6 @@ draw_sprite(SChristainrelics,spriteframe,1015,300)
 draw_text_ext_transformed_color(1300,100,damage,10,100*2.8125,size*2.5,size*2.8125,0,c_white,c_white,c_gray,c_gray,image_alpha)/// @description Insert description here
 
 
-display_set_gui_size(384,192)
+display_set_gui_size(384,216)
 
 

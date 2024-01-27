@@ -8,3 +8,4 @@ instance_destroy();
 
 
 }
+depth=-bbox_bottom

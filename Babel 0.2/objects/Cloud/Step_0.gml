@@ -5,9 +5,9 @@ if pound=0
 	{
 		
 		
-		if (!instance_exists(Warning)) { (instance_create_layer(targetx,targety,"Instances",Warning))
+		if (!instance_exists(WarningIceBlock)) { (instance_create_layer(targetx,targety,"Instances",WarningIceBlock))
 		}
-		pound=20}
-if !instance_exists(dryad){
+		pound=240}
+if !instance_exists(SnakeHead){
 instance_destroy()
 }

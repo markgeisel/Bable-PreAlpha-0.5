@@ -9,17 +9,17 @@ function Macros() {
 #macro TILEW 32
 
 
-#macro RESH_QUARTER 90
-#macro RESW_QUARTER 180
-#macro RESH 192
+#macro RESH_QUARTER 54
+#macro RESW_QUARTER 96
+#macro RESH 216
 #macro RESW 384 
-#macro RESH_HALF 96
+#macro RESH_HALF 108
 #macro RESW_HALF 192
 
 
 #macro Resoultion_w 384	
-#macro Resoultion_h 192
-#macro TRANSITION_SPEED 0.007
+#macro Resoultion_h 216
+#macro TRANSITION_SPEED 0.014
 #macro OUT 1
 #macro IN 0 
 
@@ -41,7 +41,8 @@ function Macros() {
 	DIE,
 	WAIT,
 	SPAWN,
-	ATTACK2
+	ATTACK2,
+	ATTACK3
 	}
 
 

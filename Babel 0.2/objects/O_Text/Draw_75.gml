@@ -3,10 +3,9 @@
 
 TextboxStrech(Textbox,4,y1,380,y2,background);
 display_set_gui_size(768,384)
-draw_sprite(PlayerPortait,-1, camera_get_view_border_x(3), camera_get_view_border_y(3)+195)
+draw_sprite(PlayerPortait,-1, camera_get_view_border_x(3), camera_get_view_border_y(3)+206)
 
-display_set_gui_size(384,192)
-
+display_set_gui_size(384,216)
 
 
 

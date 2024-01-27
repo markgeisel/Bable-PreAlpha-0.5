@@ -2,6 +2,10 @@ depth=-bbox_bottom
 xprevious = x;
 	yprevious = y;
 	zprevious = z;
+
+
+	
+	
 	if counter == 0 {
 with instance_create_depth(x,y,-900,AttackLight5_1)
 {target=other.id}
@@ -22,9 +26,12 @@ instance_destroy()
 	
 
 if (!global.gamePaused)&&(distanceRemaining != 0)
-{z=z-(z/distanceRemaining*0.9)
+{z=z-(z/distanceRemaining)
 	z=min(z,0)
 }
+
+
+
 
 	if (distanceRemaining == 0)
 	{
@@ -33,34 +40,18 @@ if (!global.gamePaused)&&(distanceRemaining != 0)
 	}
 	
 
-	if x = targetX|| distanceRemaining==0{
+
+
+	if y = targetY || (distanceRemaining == 0) {
 		
 		var xp, yp;
 xp = x;
 yp = y-z;
 part_emitter_region(global.ps, global.pe_snowball2, xp-8, xp+8, yp-8, yp+8, ps_shape_rectangle, ps_distr_linear);
-part_emitter_burst(global.ps, global.pe_snowball2, global.pt_snowball2, 15);
+part_emitter_burst(global.ps, global.pe_snowball2, global.pt_snowball2, 5);
 
 part_emitter_region(global.ps, global.pe_playersnowball, xp-8, xp+8, yp-8, yp+8, ps_shape_rectangle, ps_distr_linear);
-part_emitter_burst(global.ps, global.pe_playersnowball, global.pt_playersnowball, 30);
-
-		
-		
-	instance_destroy()
-
-	}
-
-
-	if y = targetY {
-		
-		var xp, yp;
-xp = x;
-yp = y-z;
-part_emitter_region(global.ps, global.pe_snowball2, xp-8, xp+8, yp-8, yp+8, ps_shape_rectangle, ps_distr_linear);
-part_emitter_burst(global.ps, global.pe_snowball2, global.pt_snowball2, 15);
-
-part_emitter_region(global.ps, global.pe_playersnowball, xp-8, xp+8, yp-8, yp+8, ps_shape_rectangle, ps_distr_linear);
-part_emitter_burst(global.ps, global.pe_playersnowball, global.pt_playersnowball, 30);
+part_emitter_burst(global.ps, global.pe_playersnowball, global.pt_playersnowball, 5);
 
 		
 		

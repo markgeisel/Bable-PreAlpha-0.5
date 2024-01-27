@@ -9,7 +9,7 @@ if  is_string(global.IceDungeonValueUse)  {
  
 Killcounter ++ 
 
-
+	
 if Killcounter > 30
 {
 ds_list_add(global.IceDungeonFodder, 1);

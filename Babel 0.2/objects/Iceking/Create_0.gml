@@ -3,27 +3,61 @@
 
 // Inherit the parent event
 event_inherited();
+
 aggro = 0; 
 state = EnemySTATE.WANDER;
 _Lighting=0;
-sprMoveR = Icekingright;
-sprMoveL= Icekingleft;
-sprMoveD = Icekingdown;
-sprMoveU = Icekingup;
-
+sprMoveR = skelebosswalkFull;
+sprMoveL= skelebossleftwalkFull;
+sprMoveD = skelebossdownwalkFull;
+sprMoveU = skelebossupwalkFull;
+boss=1
 small=0
+attack=0
+spawn=0
 
 
-sprAttack = Icekingdownattck;
-sprDie = Ice_Crown_Die;
+sprAttack = skelebossattackFull;
+sprAttackLeft=skelebossattackFullLeft
+sprAttackDown=skelebossdownattackFull
+sprAttackUp=skelebossupattackFull
+
+enemyAttackRadiusOg=enemyAttackRadius
+sprAttack2 = skelebossshootFull;
+sprAttackLeft2=skelebossleftshootFull
+sprAttackDown2=skelebossdownshootFull
+sprAttackUp2=skelebossupshootFull
+
+
+sprAttackSummon=skelebosssummonFull
+
+sprDie = skelebossspstartHead;
 sprHurt = Ice_Crown_Hurt;
+SprHurtRight=skelebosshitFull
+SprHurtLeft=skelebossLefthitFull
+SprHurtDown=skelebossdownhitFull
+SprHurtUp=skelebossuphitFull
+
+SprWait=skelebossidleFull
+SprWaitleft=skelebossleftidleFull
+SprWaitdown=skelebossdownidleFull
+SprWaitUp=skelebossupidleFull
+boss=0
+
+
+Healthbar=0
+
+
+enemyHpOG=enemyHP
 
 
 invulnerable = 0; 
 enemyScript[EnemySTATE.WANDER]= GoblinWander145;
-enemyScript[EnemySTATE.CHASE]= GoblinChaserange2;
-enemyScript[EnemySTATE.ATTACK]= GoblinAttack2;
-enemyScript[EnemySTATE.HURT] = GoblinHurt;
-enemyScript[EnemySTATE.DIE] =GoblinDie;
+enemyScript[EnemySTATE.CHASE]= GoblinChaserangeSkeleton;
+enemyScript[EnemySTATE.ATTACK]= GoblinAttackSkeleton;
+enemyScript[EnemySTATE.ATTACK2]= GoblinAttackrangeSkeleton2;
+enemyScript[EnemySTATE.ATTACK3]=GoblinAttackrangeSummon;
+enemyScript[EnemySTATE.HURT] = GoblinHurtBig;
+enemyScript[EnemySTATE.DIE] =GoblinDieSkeleton;
 invulnerable = max(invulnerable-1,0)
 can_collide = true

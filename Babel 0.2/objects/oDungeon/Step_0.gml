@@ -1,4 +1,7 @@
-
+if restart=1{
+GenerateNewDungeon();
+restart=0
+}
 
 if z == 1 {
 

@@ -49,38 +49,48 @@ changepage = 1
 
 
 }
+
+
+
+
+
 if changepage=3&&left1=1{
 	frame=0
 	changepage=0
 	left1 = 0 global.page =4}
 	
 }
+if changepage=3&&right1=1{
+	frame=0
+	changepage=0
+	right1 = 0}
+	
+
 
 if global.page==4{
-if keyboard_check_pressed(vk_right) {
+if keyboard_check_pressed(vk_right)&&changepage=0 {
 	
+	right1=1
+	frame=0
+	changepage=1
+sprite_index=Sprite506
 global.page  =0 
 y= camera_get_view_y(view_camera[3])
 }}
 
 if global.page < 4 {
 if keyboard_check_pressed(vk_right) {
-		
+	right1=1
+	frame=0
+	changepage=1
+	sprite_index=Sprite506
 global.page ++
 y= camera_get_view_y(view_camera[3])
 }
 
 }
 
-
-if mouse_check_button_released(mb_right){
-
-y=camera_get_view_y(view_camera[3])
-
-
-
-}
-
+if n=6
 
 if (y <= 140) && (y >= 60){n=0}
 if (y <= 95) && (y >= -140){n=1}

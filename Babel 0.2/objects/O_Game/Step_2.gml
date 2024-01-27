@@ -22,3 +22,5 @@ if global.gamePaused{
 if !instance_exists(GUI_Menu){ 
 instance_create_layer(camera_get_view_x(view_camera[3]),camera_get_view_y(view_camera[3]),"Gui",GUI_Menu)
 }}
+
+depth=-bbox_bottom

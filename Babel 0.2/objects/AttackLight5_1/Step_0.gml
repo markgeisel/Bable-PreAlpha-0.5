@@ -11,7 +11,7 @@ light[| eLight.Y]= target.y+z
 if !instance_exists(target)
 { counter++
 	
-	if counter == 35
+	if counter == 8
 	
 {
 	instance_destroy()}

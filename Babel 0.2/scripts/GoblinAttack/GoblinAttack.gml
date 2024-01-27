@@ -32,7 +32,7 @@ function GoblinAttack() {
 		stateTarget= EnemySTATE.CHASE;
 	
 		
-		sateWaitDuration = 30;
+		sateWaitDuration = 45;
 		state = EnemySTATE.WAIT;
 
 	}

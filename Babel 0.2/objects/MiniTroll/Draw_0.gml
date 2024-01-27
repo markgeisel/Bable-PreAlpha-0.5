@@ -58,8 +58,8 @@ if (shader_current() !=-1)shader_reset();
 
 
 // Inherit the parent event
-draw_sprite_stretched(EnemyHealthBack,image_index ,x-25,y-42,50,5);
-draw_sprite_stretched(EnemyHealth,image_index ,x-25,y-42,(enemyHP/EnemyhpOrginal)*50,5);
+draw_sprite_stretched(EnemyHealthBack,image_index ,x-25,y-32,50,3);
+draw_sprite_stretched(EnemyHealth,image_index ,x-25,y-32,(enemyHP/EnemyhpOrginal)*50,3);
 
 if hit>0{
 draw_text(x+climbX,y-0-climb,damagetaken)

@@ -1,13 +1,28 @@
-/// @description Insert description here
-// You can write your code in this editor
-xprevious = targetX;
-	yprevious = y;
-	zprevious = z;
+if global.gamePaused= false {
+if counter >= 1 {
+counter++
+if counter > 500 {
 
+instance_destroy()
+}
+}
+
+
+
+if counter==0{
+TweenEasyScale(1,1,1.5,1.5,0,80,ease_in_quad,TWEEN_MODE_BOUNCE)
+
+
+
+with instance_create_depth(x,y,-850,AttackLight)
+{target=other.id}
+counter =1 
+
+}
 
 len = point_distance(OGoblin.x,OGoblin.y,x,y);
 if counter==0{
-TweenEasyScale(1,1,2,2,0,60,ease_in_quad,TWEEN_MODE_BOUNCE)
+TweenEasyScale(1,1,2,2,0,80,ease_in_quad,TWEEN_MODE_BOUNCE)
 image_angle = direction
 {
 Xtarget=x
@@ -24,10 +39,11 @@ hspeed = lengthdir_x(spd, dir);
 
 	distanceRemainingPrevious = distanceRemaining;
 	
-	distanceRemaining = point_distance(x,y,targetX,targetY); 
+
 	percent = (distanceTotal-distanceRemaining) / distanceTotal;
 	z = -peakHeight * sin(percent * pi);	
 
-		image_alpha -= 0.005;
+		image_alpha -= 0.00125;
 
-		
+		if image_alpha = 0 {instance_destroy()}	}else{hspeed = 0
+	vspeed = 0}	
